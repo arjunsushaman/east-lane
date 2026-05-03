@@ -1,0 +1,38 @@
+export const localBusinessSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Restaurant',
+  name: 'East Lane',
+  description: 'Pan-Asian sharing plate bistro in Kingston upon Thames, London.',
+  url: 'https://eastlanekingston.co.uk',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: '10 Kingston Hill',
+    addressLocality: 'Kingston upon Thames',
+    addressRegion: 'London',
+    postalCode: 'KT2 7NH',
+    addressCountry: 'GB',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: 51.4122,
+    longitude: -0.2759,
+  },
+  servesCuisine: ['Pan-Asian', 'Vietnamese', 'Korean', 'Thai', 'Japanese'],
+  priceRange: '££',
+  currenciesAccepted: 'GBP',
+  paymentAccepted: 'Cash, Credit Card',
+  telephone: '[TBC]',
+  email: '[TBC]',
+  openingHoursSpecification: [
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+      opens: 'TBC',
+      closes: 'TBC',
+    },
+  ],
+  sameAs: ['https://www.instagram.com/eastlane_bistro'],
+  image: 'https://eastlanekingston.co.uk/images/logo-wordmark.png',
+  hasMenu: 'https://eastlanekingston.co.uk/menu',
+  acceptsReservations: 'True',
+}
