@@ -5,12 +5,10 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { X, Menu } from 'lucide-react'
 
-const leftLinks  = [
-  { label: 'Menu',  href: '/menu'  },
-  { label: 'About', href: '/about' },
-  { label: 'FAQs',  href: '/faqs'  },
-]
-const rightLinks = [
+const navLinks = [
+  { label: 'Menu',         href: '/menu'         },
+  { label: 'About',        href: '/about'        },
+  { label: 'FAQs',         href: '/faqs'         },
   { label: 'Reservations', href: '/reservations' },
   { label: 'Contact',      href: '/contact'      },
 ]
@@ -63,12 +61,12 @@ export default function Navbar() {
         <div className="h-px w-full bg-cream/15" />
 
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
-          {/* Three-column grid: left-nav | logo | right-nav */}
+          {/* Three-column grid: left-nav | logo | right-CTA */}
           <div className={`grid grid-cols-[1fr_auto_1fr] items-center transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
             scrolled ? 'h-16 lg:h-[72px]' : 'h-24 lg:h-[116px]'
           }`}>
 
-            {/* ── Left: social icons + nav links ── */}
+            {/* ── Left: social icons + all nav links ── */}
             <div className="flex items-center gap-6">
               {/* Social icons */}
               <div className="hidden lg:flex items-center gap-4">
@@ -92,14 +90,9 @@ export default function Navbar() {
                 </a>
               </div>
 
-              <div className="hidden lg:flex items-center gap-8 ml-1">
-                <Link
-                  href="/reservations"
-                  className="pill-btn text-[13px] tracking-[0.2em] border border-cream/70 text-cream hover:bg-cream hover:text-brand-dark"
-                >
-                  Book
-                </Link>
-                {leftLinks.map(l => (
+              {/* All 5 nav links */}
+              <div className="hidden lg:flex items-center gap-8">
+                {navLinks.map(l => (
                   <Link key={l.href} href={l.href} className={navItemClass}>
                     {l.label}
                   </Link>
@@ -130,19 +123,20 @@ export default function Navbar() {
                 width={300}
                 height={120}
                 className={`w-auto transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
-                  scrolled ? 'h-9 lg:h-10' : 'h-16 lg:h-[76px] drop-shadow-[0_2px_10px_rgba(0,0,0,0.7)]'
+                  scrolled ? 'h-9 lg:h-10' : 'h-16 lg:h-[76px]'
                 }`}
                 priority
               />
             </Link>
 
-            {/* ── Right: right nav links ── */}
-            <div className="hidden lg:flex items-center justify-end gap-8">
-              {rightLinks.map(l => (
-                <Link key={l.href} href={l.href} className={navItemClass}>
-                  {l.label}
-                </Link>
-              ))}
+            {/* ── Right: Book Now CTA ── */}
+            <div className="hidden lg:flex items-center justify-end">
+              <Link
+                href="/reservations"
+                className="pill-btn text-[13px] tracking-[0.2em] border border-cream/70 text-cream hover:bg-cream hover:text-brand-dark"
+              >
+                Book Now
+              </Link>
             </div>
 
             {/* Mobile right: spacer */}
@@ -185,7 +179,7 @@ export default function Navbar() {
 
           {/* Nav links */}
           <nav className="flex flex-col gap-7 flex-1">
-            {[...leftLinks, ...rightLinks].map((l, i) => (
+            {navLinks.map((l, i) => (
               <Link
                 key={l.href}
                 href={l.href}
@@ -208,13 +202,13 @@ export default function Navbar() {
             </a>
           </div>
 
-          {/* Book CTA */}
+          {/* Book Now CTA */}
           <Link
             href="/reservations"
             onClick={() => setMobileOpen(false)}
             className="pill-btn border border-cream/50 text-cream hover:bg-cream hover:text-brand-dark justify-center py-4 text-xs"
           >
-            Book a Table
+            Book Now
           </Link>
         </div>
       </div>

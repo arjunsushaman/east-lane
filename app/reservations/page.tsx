@@ -19,6 +19,7 @@ export default function ReservationsPage() {
             <p className="label-caps text-terracotta mb-5">Online Booking</p>
             <h1 className="display-heading text-cream text-[clamp(2.75rem,7vw,5.5rem)] leading-tight max-w-2xl">
               Reserve a <em className="font-cormorant italic font-normal block">Table</em>
+              <span className="block text-[clamp(1.25rem,2.5vw,2rem)] mt-2 font-jost font-light tracking-wide not-italic opacity-60">at East Lane</span>
             </h1>
             <p className="mt-4 font-jost text-sm text-cream/50 max-w-md leading-relaxed">
               Book your seat at Kingston's pan-Asian bistro. Sharing plates made for passing around.

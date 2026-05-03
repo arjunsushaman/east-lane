@@ -108,10 +108,14 @@ export default function Footer() {
             © {new Date().getFullYear()} East Lane. All rights reserved.
           </p>
           <div className="flex gap-5">
-            {['Privacy Policy', 'Terms & Conditions', 'FAQ'].map(l => (
-              <Link key={l} href={`/${l.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-')}`}
+            {[
+              { label: 'Privacy Policy',     href: '/privacy-policy'   },
+              { label: 'Terms & Conditions', href: '/terms-conditions'  },
+              { label: 'FAQ',                href: '/faqs'              },
+            ].map(l => (
+              <Link key={l.href} href={l.href}
                 className="font-jost text-xs text-brand-dark/35 hover:text-brand-dark/60 transition-colors duration-200">
-                {l}
+                {l.label}
               </Link>
             ))}
           </div>

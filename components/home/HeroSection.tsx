@@ -39,23 +39,24 @@ export default function HeroSection() {
         animate="visible"
         variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.2, delayChildren: 0.5 } } }}
       >
-        {/* Tagline */}
+        {/* Location label */}
         <motion.p
           variants={{ hidden: { opacity: 0, y: 10 }, visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.22,1,0.36,1] } } }}
           className="label-caps text-cream/60 mb-5 tracking-[0.28em]"
         >
-          Asian Bistro · Kingston upon Thames
+          Kingston upon Thames
         </motion.p>
 
-        {/* Main heading */}
+        {/* Main H1 — two lines per brief */}
         <motion.h1
           variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 1, ease: [0.22,1,0.36,1] } } }}
-          className="display-heading text-cream text-[clamp(3rem,9vw,7.5rem)] mb-4"
+          className="display-heading text-cream text-center mb-4"
         >
-          East Lane
+          <span className="block text-[clamp(3rem,9vw,7.5rem)]">East Lane</span>
+          <span className="block text-[clamp(1.4rem,3.5vw,3rem)] mt-1 opacity-90">Asian Bistro</span>
         </motion.h1>
 
-        {/* Sub-tagline italic */}
+        {/* Tagline italic */}
         <motion.p
           variants={{ hidden: { opacity: 0, y: 10 }, visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.22,1,0.36,1] } } }}
           className="editorial-quote text-cream/70 text-xl lg:text-2xl mb-10"
@@ -63,22 +64,16 @@ export default function HeroSection() {
           One address, every craving.
         </motion.p>
 
-        {/* Pill CTAs — matching reference site style */}
+        {/* CTAs — per UX brief: "Book Now" + "See Menu" */}
         <motion.div
           variants={{ hidden: { opacity: 0, y: 10 }, visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.22,1,0.36,1] } } }}
           className="flex flex-col sm:flex-row items-center gap-4"
         >
-          <Link
-            href="/reservations"
-            className="hero-pill-btn"
-          >
-            · Reservations ·
+          <Link href="/reservations" className="hero-pill-btn">
+            · Book Now ·
           </Link>
-          <Link
-            href="/menu"
-            className="hero-pill-btn"
-          >
-            · View the Menu ·
+          <Link href="/menu" className="hero-pill-btn">
+            · See Menu ·
           </Link>
         </motion.div>
       </motion.div>

@@ -25,7 +25,7 @@ export default function AboutPage() {
       <section className="bg-cream-light py-20">
         <MotionSection className="max-w-3xl mx-auto px-6 text-center">
           <p className="editorial-quote text-brand-dark text-[clamp(1.3rem,2.8vw,1.9rem)] leading-relaxed">
-            East Lane is Kingston's melting pot of the East – one address, every craving.
+            East Lane is Kingston's melting pot of the East — one address, every craving.
             From the smoky street stalls of Thailand to the bold, layered flavours of Korea,
             we've brought the best of Asia's culinary map to SW London.
           </p>
@@ -56,9 +56,9 @@ export default function AboutPage() {
               </h2>
               <MotionStagger className="space-y-5">
                 {[
-                  'At the heart of it is Chef Vin. A natural across cuisines, it was the food of the East that truly struck a chord – the kind of cooking where everyone at the table gets a bite of everything, where dishes are simple on the surface yet layered beneath.',
-                  'Raised with a deep reverence for home cooking – shaped by his mother and grandmother – he left with a backpack and a curiosity that took him through the night markets of Vietnam, the hawker lanes of Thailand, and everywhere in between.',
-                  "What struck him wasn't complexity. It was the opposite: the magic of simple things, done with soul.",
+                  'At the heart of it is Chef Vin. A natural across cuisines, it was the food of the East that truly struck a chord — the kind of cooking where everyone at the table gets a bite of everything, where dishes are simple on the surface yet layered beneath, and where great ingredients are allowed to speak for themselves.',
+                  'Raised with a deep reverence for home cooking — shaped by his mother and grandmother — he left with a backpack and a curiosity that took him through the night markets of Vietnam, the hawker lanes of Thailand, and everywhere in between.',
+                  'What struck him wasn\'t complexity. It was the opposite: the magic of simple things, done with soul.',
                 ].map((para, i) => (
                   <MotionChild key={i}>
                     <p className="font-jost text-[0.9375rem] leading-[1.8] text-brand-dark/65">{para}</p>
@@ -85,7 +85,7 @@ export default function AboutPage() {
                 a place, a journey, a moment. A slice of every country, on one table.
               </p>
               <p className="font-jost text-[0.9375rem] leading-[1.8] text-brand-dark/65 mb-10">
-                We've built a space that works as hard as the food does – for birthday dinners
+                We've built a space that works as hard as the food does — for birthday dinners
                 and lazy Sunday lunches, date nights and big family gatherings. Sharing plates
                 made for passing around, drinks that take you straight back to our favourite
                 corners of the East.
