@@ -8,30 +8,53 @@ const days = [
 
 export default function HoursSection() {
   return (
-    <section className="bg-cream-light py-20 lg:py-24">
-      <MotionSection className="max-w-xl mx-auto px-6 text-center">
-        <p className="label-caps text-terracotta mb-4">We&apos;re Open</p>
-        <h2 className="display-heading text-brand-dark text-4xl lg:text-5xl mb-12">
-          Opening <em className="font-cormorant italic font-normal">Hours</em>
+    <section className="bg-brand-dark py-20 lg:py-28" id="hours">
+      <MotionSection className="max-w-lg mx-auto px-6 text-center">
+
+        {/* Flanked label */}
+        <div className="flex items-center gap-5 mb-12">
+          <div className="h-px flex-1 bg-cream/10" />
+          <p className="label-caps text-terracotta tracking-[0.28em]">We&apos;re Open</p>
+          <div className="h-px flex-1 bg-cream/10" />
+        </div>
+
+        <h2 className="display-heading text-cream text-[clamp(2.25rem,5vw,3.5rem)] mb-14 leading-tight">
+          Opening{' '}
+          <em className="font-cormorant italic font-normal">Hours</em>
         </h2>
 
+        {/* Hours rows */}
         <div className="flex flex-col">
           {days.map((d, i) => (
-            <div key={i} className="flex items-center justify-between py-5 border-b border-cream-dark/60 last:border-0">
-              <span className="font-jost text-sm text-brand-dark/60 tracking-wide">{d.label}</span>
-              <span className="editorial-quote text-brand-dark text-lg">{d.time}</span>
+            <div
+              key={i}
+              className="flex items-baseline justify-between py-6 border-b last:border-0"
+              style={{ borderColor: 'rgba(232,222,200,0.08)' }}
+            >
+              <span className="font-jost text-sm text-cream/45 tracking-wide text-left">
+                {d.label}
+              </span>
+              <span className="editorial-quote text-cream text-xl">
+                {d.time}
+              </span>
             </div>
           ))}
         </div>
 
-        <p className="mt-8 font-jost text-xs text-brand-dark/35">
-          Hours confirmed before launch. Follow{' '}
-          <a href="https://www.instagram.com/eastlane_bistro" target="_blank" rel="noopener noreferrer"
-            className="text-terracotta hover:text-amber underline underline-offset-4">
-            @eastlane_bistro
+        {/* Footer note */}
+        <p className="mt-10 font-jost text-[0.72rem] text-cream/25 leading-relaxed">
+          Hours confirmed before launch.{' '}
+          <a
+            href="https://www.instagram.com/eastlane_bistro"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-terracotta/60 hover:text-terracotta underline underline-offset-4 transition-colors duration-200"
+          >
+            Follow us
           </a>{' '}
-          for updates.
+          for the latest updates.
         </p>
+
       </MotionSection>
     </section>
   )
