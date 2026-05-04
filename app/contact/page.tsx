@@ -75,7 +75,7 @@ export default function ContactPage() {
       />
 
       {/* ── Contact details + Form ── */}
-      <section className="bg-cream-light py-16 lg:py-24">
+      <section className="bg-cream py-16 lg:py-24">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
           <MotionSection>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-24 items-start">
@@ -142,7 +142,7 @@ export default function ContactPage() {
           className="absolute inset-0 pointer-events-none"
           style={{
             background:
-              'linear-gradient(100deg, rgba(18,14,10,0.88) 0%, rgba(18,14,10,0.55) 38%, rgba(18,14,10,0.0) 68%)',
+              'linear-gradient(100deg, rgba(30,17,11,0.88) 0%, rgba(30,17,11,0.55) 38%, rgba(30,17,11,0.0) 68%)',
           }}
           aria-hidden="true"
         />

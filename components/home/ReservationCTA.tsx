@@ -26,26 +26,26 @@ export default function ReservationCTA() {
             className="object-cover"
             sizes="(max-width: 1024px) 100vw, 50vw"
           />
-          {/* Subtle right-edge fade into dark panel */}
+          {/* Subtle right-edge fade into olive panel */}
           <div
             className="absolute inset-y-0 right-0 w-24 hidden lg:block pointer-events-none"
-            style={{ background: 'linear-gradient(to right, transparent, rgba(18,14,10,0.6))' }}
+            style={{ background: 'linear-gradient(to right, transparent, rgba(92,107,58,0.6))' }}
             aria-hidden="true"
           />
         </motion.div>
 
-        {/* ── Right: brand-dark booking panel ── */}
+        {/* ── Right: olive booking panel ── */}
         <motion.div
-          className="bg-brand-dark flex flex-col justify-center px-10 lg:px-14 xl:px-20 py-16 lg:py-20"
+          className="bg-olive flex flex-col justify-center px-10 lg:px-14 xl:px-20 py-16 lg:py-20"
           initial={{ opacity: 0, x: 24 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, margin: '-80px' }}
           transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
         >
           {/* Top rule */}
-          <div className="h-px w-10 bg-terracotta/50 mb-8" />
+          <div className="h-px w-10 bg-cream/30 mb-8" />
 
-          <p className="label-caps text-terracotta mb-5 tracking-[0.22em]">Reserve Your Table</p>
+          <p className="label-caps text-cream/75 mb-5 tracking-[0.22em]">Reserve Your Table</p>
 
           <h2 className="display-heading text-cream text-[clamp(2rem,3.2vw,2.9rem)] mb-5 leading-[1.1]">
             Gather Around<br />
@@ -54,7 +54,7 @@ export default function ReservationCTA() {
             </em>
           </h2>
 
-          <p className="font-jost text-[0.9375rem] leading-[1.8] text-cream/55 mb-10 max-w-[34ch]">
+          <p className="font-jost text-[0.9375rem] leading-[1.8] text-cream/70 mb-10 max-w-[34ch]">
             For birthday dinners, lazy Sunday lunches, date nights and big family gatherings.
             Sharing plates made for passing around.
           </p>
@@ -67,11 +67,11 @@ export default function ReservationCTA() {
             >
               · Reserve Now ·
             </Link>
-            <p className="font-jost text-[0.72rem] text-cream/30 text-center">
+            <p className="font-jost text-[0.72rem] text-cream/45 text-center">
               For groups &amp; special occasions,{' '}
               <Link
                 href="/contact"
-                className="underline underline-offset-4 hover:text-cream/55 transition-colors duration-200"
+                className="underline underline-offset-4 hover:text-cream/70 transition-colors duration-200"
               >
                 contact us directly
               </Link>

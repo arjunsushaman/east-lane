@@ -54,7 +54,7 @@ export default function Navbar() {
       <header
         role="banner"
         className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${
-          scrolled ? 'bg-[rgba(18,14,10,0.94)] backdrop-blur-md shadow-md' : 'bg-transparent'
+          scrolled ? 'bg-[rgba(168,72,26,0.97)] backdrop-blur-md shadow-md' : 'bg-transparent'
         }`}
       >
         {/* Top decorative rule */}
@@ -118,7 +118,7 @@ export default function Navbar() {
               onClick={() => setMobileOpen(false)}
             >
               <Image
-                src="/images/logo-wordmark.png"
+                src="/images/logo-white.png"
                 alt="East Lane Asian Bistro"
                 width={300}
                 height={120}
@@ -153,7 +153,7 @@ export default function Navbar() {
         role="dialog"
         aria-modal="true"
         aria-label="Navigation menu"
-        className={`fixed inset-0 z-[200] bg-brand-dark transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+        className={`fixed inset-0 z-[200] bg-olive transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
           mobileOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
@@ -162,7 +162,7 @@ export default function Navbar() {
           <div className="flex items-center justify-between mb-16">
             <Link href="/" onClick={() => setMobileOpen(false)}>
               <Image
-                src="/images/logo-wordmark.png"
+                src="/images/logo-white.png"
                 alt="East Lane"
                 width={200} height={80}
                 className="h-9 w-auto"
@@ -184,7 +184,7 @@ export default function Navbar() {
                 key={l.href}
                 href={l.href}
                 onClick={() => setMobileOpen(false)}
-                className="font-dm-serif text-4xl text-cream/90 hover:text-terracotta transition-colors duration-200"
+                className="font-dm-serif text-4xl text-cream/90 hover:text-amber transition-colors duration-200"
                 style={{ transitionDelay: `${i * 40}ms` }}
               >
                 {l.label}

@@ -1,4 +1,4 @@
-type BgVariant = 'cream-light' | 'cream' | 'olive-deep' | 'terracotta' | 'brand-dark' | 'white'
+type BgVariant = 'cream' | 'olive' | 'olive-deep' | 'amber' | 'brand-dark' | 'white'
 
 interface SectionWrapperProps {
   children: React.ReactNode
@@ -9,17 +9,17 @@ interface SectionWrapperProps {
 }
 
 const bgClasses: Record<BgVariant, string> = {
-  'cream-light': 'bg-cream-light text-brand-dark',
-  'cream':       'bg-cream text-brand-dark',
-  'olive-deep':  'bg-olive-deep text-cream',
-  'terracotta':  'bg-terracotta text-cream-light',
-  'brand-dark':  'bg-brand-dark text-cream',
-  'white':       'bg-white text-brand-dark',
+  'cream':      'bg-cream text-brand-dark',
+  'olive':      'bg-olive text-cream',
+  'olive-deep': 'bg-olive-deep text-cream',
+  'amber':      'bg-amber text-cream',
+  'brand-dark': 'bg-brand-dark text-cream',
+  'white':      'bg-white text-brand-dark',
 }
 
 export default function SectionWrapper({
   children,
-  bg = 'cream-light',
+  bg = 'cream',
   className = '',
   id,
   narrow = false,

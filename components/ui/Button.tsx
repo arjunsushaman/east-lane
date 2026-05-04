@@ -17,11 +17,11 @@ interface ButtonProps {
 
 const variantClasses: Record<ButtonVariant, string> = {
   primary:
-    'bg-terracotta hover:bg-terracotta-dark text-cream-light border border-terracotta hover:border-terracotta-dark',
+    'bg-amber hover:bg-terracotta text-cream border border-amber hover:border-terracotta',
   outline:
     'bg-transparent border border-cream text-cream hover:bg-cream/10',
   'outline-dark':
-    'bg-transparent border border-terracotta text-terracotta hover:bg-terracotta hover:text-cream-light',
+    'bg-transparent border border-terracotta text-terracotta hover:bg-terracotta hover:text-cream',
   ghost:
     'bg-transparent text-terracotta hover:text-amber underline underline-offset-4',
 }

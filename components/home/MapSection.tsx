@@ -8,7 +8,7 @@ const embedSrc   =
 
 export default function MapSection() {
   return (
-    <section className="bg-cream-light overflow-hidden" id="location">
+    <section className="bg-cream overflow-hidden" id="location">
       <div className="max-w-[1400px] mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2">
 
@@ -73,7 +73,7 @@ export default function MapSection() {
               href={mapsSearch}
               target="_blank"
               rel="noopener noreferrer"
-              className="pill-btn border border-brand-dark/35 text-brand-dark hover:bg-brand-dark hover:text-cream-light transition-colors duration-300 self-start"
+              className="pill-btn border border-brand-dark/35 text-brand-dark hover:bg-brand-dark hover:text-cream transition-colors duration-300 self-start"
               aria-label="Get directions to East Lane on Google Maps"
             >
               · Get Directions ·

@@ -13,7 +13,7 @@ export default function HeroSection() {
 
   return (
     <section
-      className="relative w-full overflow-hidden bg-gradient-to-br from-[#1e1510] via-[#2a1a0e] to-[#0e1208]"
+      className="relative w-full overflow-hidden bg-gradient-to-br from-olive via-olive-deep to-brand-dark"
       style={{ height: '100dvh', minHeight: '600px' }}
       aria-label="East Lane hero"
     >

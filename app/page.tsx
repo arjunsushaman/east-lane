@@ -37,7 +37,7 @@ export default function HomePage() {
         linkHref="/menu"
         imageAlt="East Lane sharing plates"
         imageSrc="/images/editorial-menu.jpg"
-        bgClass="bg-cream-light"
+        bgClass="bg-cream"
       />
 
       {/* 5 — Reservation CTA block */}

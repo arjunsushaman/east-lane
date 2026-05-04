@@ -2,7 +2,7 @@ import MotionSection from '@/components/ui/MotionSection'
 
 export default function IntroSection() {
   return (
-    <section className="bg-cream-light py-20 lg:py-28" id="intro">
+    <section className="bg-cream py-20 lg:py-28" id="intro">
       <div className="max-w-3xl mx-auto px-6 lg:px-8">
         <MotionSection className="text-center">
 

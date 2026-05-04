@@ -64,7 +64,7 @@ export default function FAQsPage() {
         subtitle="Everything you need to know about East Lane."
       />
 
-      <section className="bg-cream-light py-16 lg:py-20">
+      <section className="bg-cream py-16 lg:py-20">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
           <MotionSection>
             <FAQAccordion categories={faqData} />
@@ -75,10 +75,10 @@ export default function FAQsPage() {
               Still have questions? We&apos;re happy to help.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link href="/contact" className="pill-btn border border-brand-dark/35 text-brand-dark hover:bg-brand-dark hover:text-cream-light">
+              <Link href="/contact" className="pill-btn border border-brand-dark/35 text-brand-dark hover:bg-brand-dark hover:text-cream">
                 Contact Us
               </Link>
-              <Link href="/reservations" className="pill-btn bg-terracotta border border-terracotta text-cream hover:bg-terracotta-dark hover:border-terracotta-dark">
+              <Link href="/reservations" className="pill-btn bg-amber border border-amber text-cream hover:bg-terracotta hover:border-terracotta">
                 Book a Table
               </Link>
             </div>

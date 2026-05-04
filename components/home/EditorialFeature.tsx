@@ -28,7 +28,7 @@ export default function EditorialFeature({
   imageAlt,
   imageSrc,
   imageRight = false,
-  bgClass = 'bg-cream-light',
+  bgClass = 'bg-cream',
 }: EditorialFeatureProps) {
 
   const textCol = (
@@ -90,7 +90,7 @@ export default function EditorialFeature({
           sizes="(max-width: 1024px) 100vw, 50vw"
         />
       ) : (
-        <div className="w-full h-full bg-gradient-to-br from-olive-deep to-brand-dark flex items-center justify-center">
+        <div className="w-full h-full bg-gradient-to-br from-olive to-brand-dark flex items-center justify-center">
           <p
             className="label-caps text-cream/20 text-center px-4"
             style={{ fontSize: '0.58rem' }}

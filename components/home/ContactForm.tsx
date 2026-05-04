@@ -132,7 +132,7 @@ export default function ContactForm({ showPhone = false, light = false }: Contac
           className={`pill-btn border transition-colors duration-300 ${
             light
               ? 'border-cream/60 text-cream hover:bg-cream hover:text-brand-dark'
-              : 'border-brand-dark/40 text-brand-dark hover:bg-brand-dark hover:text-cream-light'
+              : 'border-brand-dark/40 text-brand-dark hover:bg-brand-dark hover:text-cream'
           } ${isSubmitting ? 'opacity-50 pointer-events-none' : ''}`}
         >
           {isSubmitting ? '· Sending… ·' : '· Send Message ·'}

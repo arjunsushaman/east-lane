@@ -15,18 +15,18 @@ export default function NewsletterSection() {
   }
 
   return (
-    <section className="bg-brand-dark py-20 lg:py-24">
+    <section className="bg-olive py-20 lg:py-24">
       <div className="max-w-2xl mx-auto px-6 text-center">
-        <p className="label-caps text-terracotta mb-4">Stay Connected</p>
+        <p className="label-caps text-cream/75 mb-4">Stay Connected</p>
         <h2 className="display-heading text-cream text-3xl lg:text-4xl mb-3">
           Be the first to hear
         </h2>
-        <p className="editorial-quote text-cream/60 text-xl mb-8">
+        <p className="editorial-quote text-cream/70 text-xl mb-8">
           Events, new menus, and specials.
         </p>
 
         {submitted ? (
-          <p className="editorial-quote text-cream/70 text-2xl">You&apos;re on the list — thank you.</p>
+          <p className="editorial-quote text-cream/80 text-2xl">You&apos;re on the list — thank you.</p>
         ) : (
           <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-0 max-w-md mx-auto">
             <label htmlFor="newsletter-email" className="sr-only">Email address</label>
@@ -37,12 +37,12 @@ export default function NewsletterSection() {
               onChange={e => setEmail(e.target.value)}
               placeholder="Your email address"
               required
-              className="flex-1 px-5 py-3.5 font-jost text-sm bg-white/5 border border-cream/20 text-cream placeholder:text-cream/30 outline-none focus:border-cream/50 transition-colors"
+              className="flex-1 px-5 py-3.5 font-jost text-sm bg-cream/10 border border-cream/30 text-cream placeholder:text-cream/40 outline-none focus:border-cream/60 transition-colors"
               aria-label="Email address for newsletter"
             />
             <button
               type="submit"
-              className="px-7 py-3.5 bg-terracotta hover:bg-terracotta-dark text-cream font-jost text-[0.7rem] font-medium tracking-widest uppercase transition-colors duration-200"
+              className="px-7 py-3.5 bg-amber hover:bg-terracotta text-cream font-jost text-[0.7rem] font-medium tracking-widest uppercase transition-colors duration-200"
             >
               Subscribe
             </button>

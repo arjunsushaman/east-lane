@@ -8,14 +8,14 @@ const days = [
 
 export default function HoursSection() {
   return (
-    <section className="bg-brand-dark py-20 lg:py-28" id="hours">
+    <section className="bg-olive py-20 lg:py-28" id="hours">
       <MotionSection className="max-w-lg mx-auto px-6 text-center">
 
         {/* Flanked label */}
         <div className="flex items-center gap-5 mb-12">
-          <div className="h-px flex-1 bg-cream/10" />
-          <p className="label-caps text-terracotta tracking-[0.28em]">We&apos;re Open</p>
-          <div className="h-px flex-1 bg-cream/10" />
+          <div className="h-px flex-1 bg-cream/20" />
+          <p className="label-caps text-cream/75 tracking-[0.28em]">We&apos;re Open</p>
+          <div className="h-px flex-1 bg-cream/20" />
         </div>
 
         <h2 className="display-heading text-cream text-[clamp(2.25rem,5vw,3.5rem)] mb-14 leading-tight">
@@ -29,9 +29,9 @@ export default function HoursSection() {
             <div
               key={i}
               className="flex items-baseline justify-between py-6 border-b last:border-0"
-              style={{ borderColor: 'rgba(232,222,200,0.08)' }}
+              style={{ borderColor: 'rgba(232,222,200,0.18)' }}
             >
-              <span className="font-jost text-sm text-cream/45 tracking-wide text-left">
+              <span className="font-jost text-sm text-cream/70 tracking-wide text-left">
                 {d.label}
               </span>
               <span className="editorial-quote text-cream text-xl">
@@ -42,13 +42,13 @@ export default function HoursSection() {
         </div>
 
         {/* Footer note */}
-        <p className="mt-10 font-jost text-[0.72rem] text-cream/25 leading-relaxed">
+        <p className="mt-10 font-jost text-[0.72rem] text-cream/50 leading-relaxed">
           Hours confirmed before launch.{' '}
           <a
             href="https://www.instagram.com/eastlane_bistro"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-terracotta/60 hover:text-terracotta underline underline-offset-4 transition-colors duration-200"
+            className="text-cream/60 hover:text-cream underline underline-offset-4 transition-colors duration-200"
           >
             Follow us
           </a>{' '}

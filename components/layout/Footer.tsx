@@ -22,7 +22,7 @@ const navLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-cream-light" aria-label="Site footer">
+    <footer className="bg-cream" aria-label="Site footer">
       {/* Top rule */}
       <div className="h-px bg-cream-dark/50" />
 

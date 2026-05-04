@@ -15,18 +15,18 @@ export default function PageHero({
   subtitle,
   dark = true,
 }: PageHeroProps) {
-  const bg   = dark ? 'bg-brand-dark' : 'bg-cream-light'
+  const bg   = dark ? 'bg-olive' : 'bg-cream'
   const text = dark ? 'text-cream'    : 'text-brand-dark'
 
   return (
     <section className={`${bg} pt-36 pb-16 lg:pt-44 lg:pb-20`}>
       <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
         {/* Top rule */}
-        <div className={`h-px mb-10 ${dark ? 'bg-cream/15' : 'bg-cream-dark/50'}`} />
+        <div className={`h-px mb-10 ${dark ? 'bg-cream/20' : 'bg-cream-dark/50'}`} />
 
         <MotionSection>
           {label && (
-            <p className={`label-caps mb-5 ${dark ? 'text-terracotta' : 'text-terracotta'}`}>{label}</p>
+            <p className={`label-caps mb-5 ${dark ? 'text-cream/70' : 'text-terracotta'}`}>{label}</p>
           )}
           <h1 className={`display-heading ${text} text-[clamp(2.75rem,7vw,5.5rem)] leading-tight max-w-3xl`}>
             {title}
@@ -35,13 +35,13 @@ export default function PageHero({
             )}
           </h1>
           {subtitle && (
-            <p className={`mt-4 font-jost text-sm leading-relaxed max-w-xl ${dark ? 'text-cream/50' : 'text-brand-dark/55'}`}>
+            <p className={`mt-4 font-jost text-sm leading-relaxed max-w-xl ${dark ? 'text-cream/60' : 'text-brand-dark/55'}`}>
               {subtitle}
             </p>
           )}
         </MotionSection>
 
-        <div className={`h-px mt-12 ${dark ? 'bg-cream/10' : 'bg-cream-dark/40'}`} />
+        <div className={`h-px mt-12 ${dark ? 'bg-cream/15' : 'bg-cream-dark/40'}`} />
       </div>
     </section>
   )

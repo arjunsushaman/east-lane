@@ -22,7 +22,7 @@ export default function AboutPage() {
       />
 
       {/* Opening quote — full-width editorial */}
-      <section className="bg-cream-light py-20">
+      <section className="bg-cream py-20">
         <MotionSection className="max-w-3xl mx-auto px-6 text-center">
           <p className="editorial-quote text-brand-dark text-[clamp(1.3rem,2.8vw,1.9rem)] leading-relaxed">
             East Lane is Kingston's melting pot of the East — one address, every craving.
@@ -71,7 +71,7 @@ export default function AboutPage() {
       </section>
 
       {/* Chef section — text left, photo right */}
-      <section className="bg-cream-light overflow-hidden">
+      <section className="bg-cream overflow-hidden">
         <div className="max-w-[1400px] mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2">
             {/* Text */}
@@ -92,7 +92,7 @@ export default function AboutPage() {
               </p>
               <Link
                 href="/reservations"
-                className="pill-btn border border-brand-dark/40 text-brand-dark hover:bg-brand-dark hover:text-cream-light self-start"
+                className="pill-btn border border-brand-dark/40 text-brand-dark hover:bg-brand-dark hover:text-cream self-start"
               >
                 · Reserve Now ·
               </Link>

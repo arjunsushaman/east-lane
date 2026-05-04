@@ -11,12 +11,12 @@
   --color-cream:            #E8DEC8;
   --color-cream-light:      #F2EDE0;
   --color-cream-dark:       #D4C9AC;
-  --color-brand-dark:       #120E0A;
-  --color-nav-bg:           rgba(18,14,10,0.94);
+  --color-brand-dark:       #1E110B;
+  --color-nav-bg:           rgba(30,17,11,0.94);
 
   /* System */
-  --color-background: #F2EDE0;
-  --color-foreground: #120E0A;
+  --color-background: #E8DEC8;
+  --color-foreground: #1E110B;
 
   /* ── Fonts ── */
   --font-dm-serif:   var(--font-dm-serif-display);
@@ -26,8 +26,8 @@
 }
 
 :root {
-  --background: #F2EDE0;
-  --foreground: #120E0A;
+  --background: #E8DEC8;
+  --foreground: #1E110B;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -104,7 +104,7 @@ body {
 }
 .hero-pill-btn:hover {
   background: #E8DEC8;
-  color: #120E0A;
+  color: #1E110B;
   border-color: #E8DEC8;
 }
 
@@ -119,9 +119,9 @@ body {
 .hero-overlay {
   background: linear-gradient(
     to bottom,
-    rgba(18,14,10,0.60) 0%,
-    rgba(18,14,10,0.40) 40%,
-    rgba(18,14,10,0.75) 100%
+    rgba(30,17,11,0.60) 0%,
+    rgba(30,17,11,0.40) 40%,
+    rgba(30,17,11,0.75) 100%
   );
 }
 

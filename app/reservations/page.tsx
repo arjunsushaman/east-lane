@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { pageMetadata } from '@/lib/metadata'
+import PageHero from '@/components/shared/PageHero'
 import MotionSection from '@/components/ui/MotionSection'
 import Link from 'next/link'
 
@@ -11,26 +12,15 @@ export const metadata: Metadata = {
 export default function ReservationsPage() {
   return (
     <>
-      {/* Dark header */}
-      <section className="bg-brand-dark pt-36 pb-16 lg:pt-44 lg:pb-20">
-        <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
-          <div className="h-px mb-10 bg-cream/15" />
-          <MotionSection>
-            <p className="label-caps text-terracotta mb-5">Online Booking</p>
-            <h1 className="display-heading text-cream text-[clamp(2.75rem,7vw,5.5rem)] leading-tight max-w-2xl">
-              Reserve a <em className="font-cormorant italic font-normal block">Table</em>
-              <span className="block text-[clamp(1.25rem,2.5vw,2rem)] mt-2 font-jost font-light tracking-wide not-italic opacity-60">at East Lane</span>
-            </h1>
-            <p className="mt-4 font-jost text-sm text-cream/50 max-w-md leading-relaxed">
-              Book your seat at Kingston's pan-Asian bistro. Sharing plates made for passing around.
-            </p>
-          </MotionSection>
-          <div className="h-px mt-12 bg-cream/10" />
-        </div>
-      </section>
+      <PageHero
+        label="Online Booking"
+        title="Reserve a"
+        titleItalic="Table"
+        subtitle="Book your seat at Kingston's pan-Asian bistro. Sharing plates made for passing around."
+      />
 
       {/* Booking widget */}
-      <section className="bg-cream-light py-16 lg:py-24">
+      <section className="bg-cream py-16 lg:py-24">
         <div className="max-w-2xl mx-auto px-6 lg:px-10">
           <MotionSection>
             {/* Dojo widget placeholder */}
@@ -47,7 +37,7 @@ export default function ReservationsPage() {
               <Link
                 href="https://app.dojo.tech"
                 target="_blank" rel="noopener noreferrer"
-                className="pill-btn bg-terracotta border border-terracotta text-cream hover:bg-terracotta-dark hover:border-terracotta-dark px-10 py-4 justify-center"
+                className="pill-btn bg-amber border border-amber text-cream hover:bg-terracotta hover:border-terracotta px-10 py-4 justify-center"
               >
                 · Reserve via Dojo ·
               </Link>
@@ -64,7 +54,7 @@ export default function ReservationsPage() {
               <address className="not-italic font-jost text-sm text-brand-dark/40 mb-6">
                 10 Kingston Hill, Kingston upon Thames, KT2 7NH
               </address>
-              <Link href="/contact" className="pill-btn border border-brand-dark/35 text-brand-dark hover:bg-brand-dark hover:text-cream-light">
+              <Link href="/contact" className="pill-btn border border-brand-dark/35 text-brand-dark hover:bg-brand-dark hover:text-cream">
                 Get in Touch
               </Link>
             </div>

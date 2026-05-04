@@ -82,7 +82,7 @@ export default function MenuPage() {
       />
 
       {/* ── Intro quote ── */}
-      <section className="bg-cream-light py-14 lg:py-20">
+      <section className="bg-cream py-14 lg:py-20">
         <MotionSection className="max-w-2xl mx-auto px-6 text-center">
           <p className="editorial-quote text-brand-dark text-[clamp(1.1rem,2vw,1.4rem)] leading-relaxed">
             Our menu is a journey across the East — from the hawker lanes of Vietnam to the
@@ -148,7 +148,7 @@ export default function MenuPage() {
                     {sec.items.map((item, i) => (
                       <div
                         key={i}
-                        className="group flex items-start justify-between gap-6 py-5 border-b border-cream-dark/25 last:border-0 lg:[&:nth-last-child(2):nth-child(odd)]:border-0 transition-colors duration-200 hover:bg-cream-light -mx-3 px-3 rounded-sm"
+                        className="group flex items-start justify-between gap-6 py-5 border-b border-cream-dark/25 last:border-0 lg:[&:nth-last-child(2):nth-child(odd)]:border-0 transition-colors duration-200 hover:bg-cream-dark/20 -mx-3 px-3 rounded-sm"
                       >
                         {/* Name + description */}
                         <div className="flex-1 min-w-0">
@@ -185,7 +185,7 @@ export default function MenuPage() {
             </p>
             <Link
               href="/reservations"
-              className="pill-btn border border-brand-dark/35 text-brand-dark hover:bg-brand-dark hover:text-cream-light"
+              className="pill-btn border border-brand-dark/35 text-brand-dark hover:bg-brand-dark hover:text-cream"
             >
               · Book a Table ·
             </Link>
