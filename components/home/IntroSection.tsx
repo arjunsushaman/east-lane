@@ -1,4 +1,12 @@
 import MotionSection from '@/components/ui/MotionSection'
+import TextReveal from '@/components/ui/TextReveal'
+
+const INTRO_TEXT =
+  'East Lane is Kingston’s melting pot of the East — one address, every craving. ' +
+  'From the smoky street stalls of Thailand to the bold, layered flavours of Korea, ' +
+  'sharing plates made for passing around, drinks that take you straight back to our ' +
+  'favourite corners of the East. Book a table at East Lane, the pan-Asian bistro in ' +
+  'Kingston upon Thames.'
 
 export default function IntroSection() {
   return (
@@ -15,16 +23,13 @@ export default function IntroSection() {
             <div className="h-px flex-1 bg-terracotta/20" />
           </div>
 
-          {/* SEO-critical live text */}
-          <p className="editorial-quote text-brand-dark text-[clamp(1.2rem,2.4vw,1.7rem)] leading-relaxed">
-            East Lane is Kingston's melting pot of the East — one address, every craving.
-            From the smoky street stalls of Thailand to the bold, layered flavours of Korea,
-            sharing plates made for passing around, drinks that take you straight back to our
-            favourite corners of the East. Book a table at East Lane, the pan-Asian bistro in
-            Kingston upon Thames.
-          </p>
+          {/* Word-by-word scroll reveal */}
+          <TextReveal
+            text={INTRO_TEXT}
+            className="editorial-quote text-brand-dark text-[clamp(1.2rem,2.4vw,1.7rem)] leading-relaxed"
+          />
 
-          {/* Decorative bottom dot */}
+          {/* Decorative dot */}
           <div className="mt-10 flex justify-center">
             <span className="w-1.5 h-1.5 rounded-full bg-terracotta/40 inline-block" />
           </div>

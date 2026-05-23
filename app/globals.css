@@ -32,7 +32,7 @@
 
 *, *::before, *::after { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+/* scroll-behavior handled by Lenis smooth scroll */
 
 body {
   background: var(--background);
@@ -123,6 +123,26 @@ body {
     rgba(30,17,11,0.40) 40%,
     rgba(30,17,11,0.75) 100%
   );
+}
+
+/* ── Marquee animation ── */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.marquee-track {
+  animation: marquee 38s linear infinite;
+  will-change: transform;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+/* Lenis smooth scroll — override native smooth for sections we control */
+html.lenis {
+  height: auto;
 }
 
 /* ── Reduced motion ── */

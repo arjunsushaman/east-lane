@@ -6,6 +6,7 @@ import FeastImage             from '@/components/home/FeastImage'
 import EditorialFeature       from '@/components/home/EditorialFeature'
 import ReservationCTA         from '@/components/home/ReservationCTA'
 import HoursSection           from '@/components/home/HoursSection'
+import MarqueeStrip           from '@/components/home/MarqueeStrip'
 import MapSection             from '@/components/home/MapSection'
 import HomepageContactSection from '@/components/home/HomepageContactSection'
 import NewsletterSection      from '@/components/home/NewsletterSection'
@@ -27,7 +28,10 @@ export default function HomePage() {
       {/* 3 — Full-bleed feast image */}
       <FeastImage />
 
-      {/* 4 — Editorial: Menu tease (large photo left + text right) */}
+      {/* 4 — Marquee strip */}
+      <MarqueeStrip />
+
+      {/* 5 — Editorial: Menu tease (large photo left + text right) */}
       <EditorialFeature
         label="The Menu"
         heading="One Table,"

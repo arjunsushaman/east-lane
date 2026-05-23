@@ -5,6 +5,8 @@ import { defaultMetadata } from '@/lib/metadata'
 import { localBusinessSchema } from '@/lib/schema'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
+import SmoothScrollProvider from '@/components/providers/SmoothScrollProvider'
+import CustomCursor from '@/components/ui/CustomCursor'
 
 export const metadata: Metadata = defaultMetadata
 
@@ -25,9 +27,12 @@ export default function RootLayout({
         />
       </head>
       <body className="antialiased min-h-full flex flex-col">
-        <Navbar />
-        <main className="flex-1">{children}</main>
-        <Footer />
+        <SmoothScrollProvider>
+          <CustomCursor />
+          <Navbar />
+          <main className="flex-1">{children}</main>
+          <Footer />
+        </SmoothScrollProvider>
       </body>
     </html>
   )

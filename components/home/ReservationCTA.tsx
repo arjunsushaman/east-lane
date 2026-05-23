@@ -1,22 +1,62 @@
 'use client'
 
+import { useRef } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { motion } from 'framer-motion'
+import { useGSAP } from '@gsap/react'
+import { gsap } from '@/lib/gsap'
 
 export default function ReservationCTA() {
+  const sectionRef = useRef<HTMLElement>(null)
+  const imageRef = useRef<HTMLDivElement>(null)
+  const panelRef = useRef<HTMLDivElement>(null)
+
+  useGSAP(() => {
+    if (!sectionRef.current || !imageRef.current || !panelRef.current) return
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+
+    // Image drifts down; panel drifts up — creates 3D split depth
+    gsap.fromTo(
+      imageRef.current,
+      { y: -22 },
+      {
+        y: 22,
+        ease: 'none',
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: 'top bottom',
+          end: 'bottom top',
+          scrub: 2,
+        },
+      }
+    )
+
+    gsap.fromTo(
+      panelRef.current,
+      { y: 22 },
+      {
+        y: -22,
+        ease: 'none',
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: 'top bottom',
+          end: 'bottom top',
+          scrub: 2,
+        },
+      }
+    )
+  }, [])
+
   return (
-    <section className="overflow-hidden" aria-label="Reserve a table">
+    <section ref={sectionRef} aria-label="Reserve a table">
       <div className="grid grid-cols-1 lg:grid-cols-2">
 
-        {/* ── Left: full-bleed image ── */}
-        <motion.div
+        {/* Left: full-bleed image */}
+        <div
+          ref={imageRef}
           className="relative overflow-hidden"
           style={{ minHeight: 'clamp(380px, 52vw, 620px)' }}
-          initial={{ opacity: 0, scale: 1.05 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true, margin: '-80px' }}
-          transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+          data-cursor="image"
         >
           <Image
             src="/images/reservation-interior.jpg"
@@ -32,17 +72,13 @@ export default function ReservationCTA() {
             style={{ background: 'linear-gradient(to right, transparent, rgba(92,107,58,0.6))' }}
             aria-hidden="true"
           />
-        </motion.div>
+        </div>
 
-        {/* ── Right: olive booking panel ── */}
-        <motion.div
+        {/* Right: olive booking panel */}
+        <div
+          ref={panelRef}
           className="bg-olive flex flex-col justify-center px-10 lg:px-14 xl:px-20 py-16 lg:py-20"
-          initial={{ opacity: 0, x: 24 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, margin: '-80px' }}
-          transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
         >
-          {/* Top rule */}
           <div className="h-px w-10 bg-cream/30 mb-8" />
 
           <p className="label-caps text-cream/75 mb-5 tracking-[0.22em]">Reserve Your Table</p>
@@ -59,10 +95,10 @@ export default function ReservationCTA() {
             Sharing plates made for passing around.
           </p>
 
-          {/* CTAs */}
           <div className="flex flex-col gap-4">
             <Link
               href="/reservations"
+              data-cursor="cta"
               className="pill-btn border border-cream/55 text-cream hover:bg-cream hover:text-brand-dark justify-center py-4 transition-colors duration-300"
             >
               · Reserve Now ·
@@ -77,7 +113,7 @@ export default function ReservationCTA() {
               </Link>
             </p>
           </div>
-        </motion.div>
+        </div>
 
       </div>
     </section>

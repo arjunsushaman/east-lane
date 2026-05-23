@@ -3,21 +3,58 @@
 import { useEffect, useRef } from 'react'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
+import { useGSAP } from '@gsap/react'
+import { gsap, ScrollTrigger } from '@/lib/gsap'
+
+gsap.registerPlugin(useGSAP)
 
 export default function HeroSection() {
   const videoRef = useRef<HTMLVideoElement>(null)
+  const sectionRef = useRef<HTMLElement>(null)
+  const contentRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     videoRef.current?.play().catch(() => {})
   }, [])
 
+  useGSAP(() => {
+    if (!sectionRef.current || !videoRef.current || !contentRef.current) return
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+
+    // Video drifts upward as you scroll out of the hero
+    gsap.to(videoRef.current, {
+      yPercent: 25,
+      ease: 'none',
+      scrollTrigger: {
+        trigger: sectionRef.current,
+        start: 'top top',
+        end: 'bottom top',
+        scrub: true,
+      },
+    })
+
+    // Hero content fades and lifts as you scroll away
+    gsap.to(contentRef.current, {
+      opacity: 0,
+      y: -55,
+      ease: 'none',
+      scrollTrigger: {
+        trigger: sectionRef.current,
+        start: 'top top',
+        end: '48% top',
+        scrub: 1.5,
+      },
+    })
+  }, [])
+
   return (
     <section
+      ref={sectionRef}
       className="relative w-full overflow-hidden bg-gradient-to-br from-olive via-olive-deep to-brand-dark"
       style={{ height: '100dvh', minHeight: '600px' }}
       aria-label="East Lane hero"
     >
-      {/* ── Background: video with image fallback ── */}
+      {/* Background video */}
       <video
         ref={videoRef}
         className="absolute inset-0 z-0 w-full h-full object-cover"
@@ -28,55 +65,68 @@ export default function HeroSection() {
         <source src="/videos/hero.mp4" type="video/mp4" />
       </video>
 
-
-      {/* Dark scrim — cinematic overlay */}
+      {/* Dark scrim */}
       <div className="hero-overlay absolute inset-0 z-10" aria-hidden="true" />
 
-      {/* ── Content: positioned in lower third ── */}
-      <motion.div
-        className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center px-6"
-        initial="hidden"
-        animate="visible"
-        variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.2, delayChildren: 0.5 } } }}
-      >
-        {/* Location label */}
-        <motion.p
-          variants={{ hidden: { opacity: 0, y: 10 }, visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.22,1,0.36,1] } } }}
-          className="label-caps text-cream/60 mb-5 tracking-[0.28em]"
-        >
-          Kingston upon Thames
-        </motion.p>
-
-        {/* Main H1 — two lines per brief */}
-        <motion.h1
-          variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 1, ease: [0.22,1,0.36,1] } } }}
-          className="display-heading text-cream text-center mb-4"
-        >
-          <span className="block text-[clamp(3rem,9vw,7.5rem)]">East Lane</span>
-          <span className="block text-[clamp(1.4rem,3.5vw,3rem)] mt-1 opacity-90">Asian Bistro</span>
-        </motion.h1>
-
-        {/* Tagline italic */}
-        <motion.p
-          variants={{ hidden: { opacity: 0, y: 10 }, visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.22,1,0.36,1] } } }}
-          className="editorial-quote text-cream/70 text-xl lg:text-2xl mb-10"
-        >
-          One address, every craving.
-        </motion.p>
-
-        {/* CTAs — per UX brief: "Book Now" + "See Menu" */}
+      {/* Outer wrapper — GSAP fades/lifts this on scroll */}
+      <div ref={contentRef} className="absolute inset-0 z-20">
+        {/* Inner — Framer Motion stagger entrance on load */}
         <motion.div
-          variants={{ hidden: { opacity: 0, y: 10 }, visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.22,1,0.36,1] } } }}
-          className="flex flex-col sm:flex-row items-center gap-4"
+          className="flex flex-col items-center justify-center text-center px-6 h-full"
+          initial="hidden"
+          animate="visible"
+          variants={{
+            hidden: {},
+            visible: { transition: { staggerChildren: 0.2, delayChildren: 0.5 } },
+          }}
         >
-          <Link href="/reservations" className="hero-pill-btn">
-            · Book Now ·
-          </Link>
-          <Link href="/menu" className="hero-pill-btn">
-            · See Menu ·
-          </Link>
+          <motion.p
+            variants={{
+              hidden: { opacity: 0, y: 10 },
+              visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] } },
+            }}
+            className="label-caps text-cream/60 mb-5 tracking-[0.28em]"
+          >
+            Kingston upon Thames
+          </motion.p>
+
+          <motion.h1
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0, transition: { duration: 1, ease: [0.22, 1, 0.36, 1] } },
+            }}
+            className="display-heading text-cream text-center mb-4"
+          >
+            <span className="block text-[clamp(3rem,9vw,7.5rem)]">East Lane</span>
+            <span className="block text-[clamp(1.4rem,3.5vw,3rem)] mt-1 opacity-90">Asian Bistro</span>
+          </motion.h1>
+
+          <motion.p
+            variants={{
+              hidden: { opacity: 0, y: 10 },
+              visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] } },
+            }}
+            className="editorial-quote text-cream/70 text-xl lg:text-2xl mb-10"
+          >
+            One address, every craving.
+          </motion.p>
+
+          <motion.div
+            variants={{
+              hidden: { opacity: 0, y: 10 },
+              visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] } },
+            }}
+            className="flex flex-col sm:flex-row items-center gap-4"
+          >
+            <Link href="/reservations" className="hero-pill-btn" data-cursor="cta">
+              · Book Now ·
+            </Link>
+            <Link href="/menu" className="hero-pill-btn" data-cursor="cta">
+              · See Menu ·
+            </Link>
+          </motion.div>
         </motion.div>
-      </motion.div>
+      </div>
 
       {/* Scroll indicator */}
       <motion.div
