@@ -1,4 +1,5 @@
 import { DM_Serif_Display, Cormorant_Garamond, Jost } from 'next/font/google'
+import localFont from 'next/font/local'
 
 export const dmSerifDisplay = DM_Serif_Display({
   weight: ['400'],
@@ -20,5 +21,11 @@ export const jost = Jost({
   weight: ['300', '400', '500', '600'],
   subsets: ['latin'],
   variable: '--font-jost',
+  display: 'swap',
+})
+
+export const cubaoNarrow = localFont({
+  src: '../public/fonts/Cubao_Free_Narrow.otf',
+  variable: '--font-cubao-narrow',
   display: 'swap',
 })

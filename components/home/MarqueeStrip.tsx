@@ -1,5 +1,5 @@
-const MARQUEE_TEXT =
-  'SHARING PLATES · PAN-ASIAN BISTRO · KINGSTON UPON THAMES · EAST LANE · '
+﻿const MARQUEE_TEXT =
+  'SHARING PLATES · ASIAN BISTRO · KINGSTON UPON THAMES · EAST LANE · '
 
 export default function MarqueeStrip() {
   return (

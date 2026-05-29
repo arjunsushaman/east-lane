@@ -5,7 +5,7 @@ const INTRO_TEXT =
   'East Lane is Kingston’s melting pot of the East — one address, every craving. ' +
   'From the smoky street stalls of Thailand to the bold, layered flavours of Korea, ' +
   'sharing plates made for passing around, drinks that take you straight back to our ' +
-  'favourite corners of the East. Book a table at East Lane, the pan-Asian bistro in ' +
+  'favourite corners of the East. Book a table at East Lane, the Asian bistro in ' +
   'Kingston upon Thames.'
 
 export default function IntroSection() {

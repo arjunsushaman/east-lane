@@ -9,7 +9,7 @@ import { gsap } from '@/lib/gsap'
 
 interface EditorialFeatureProps {
   label: string
-  heading: string
+  heading?: string
   headingItalic?: string
   body: string
   linkLabel: string
@@ -128,17 +128,19 @@ export default function EditorialFeature({
         <p className="label-caps text-terracotta">{label}</p>
       </div>
 
-      <h2
-        data-anim=""
-        className="display-heading text-brand-dark text-[clamp(2rem,3.8vw,3.1rem)] mb-6 leading-[1.08]"
-      >
-        {heading}
-        {headingItalic && (
-          <em className="font-cormorant italic font-normal block text-[0.92em] mt-1">
-            {headingItalic}
-          </em>
-        )}
-      </h2>
+      {(heading || headingItalic) && (
+        <h2
+          data-anim=""
+          className="display-heading text-brand-dark text-[clamp(2rem,3.8vw,3.1rem)] mb-6 leading-[1.08]"
+        >
+          {heading}
+          {headingItalic && (
+            <em className="font-cormorant italic font-normal block text-[0.92em] mt-1">
+              {headingItalic}
+            </em>
+          )}
+        </h2>
+      )}
 
       <p
         data-anim=""

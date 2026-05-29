@@ -10,6 +10,7 @@ interface PageHeroProps {
   titleItalic?: string
   subtitle?: string
   dark?: boolean
+  cubaoTitle?: boolean
 }
 
 export default function PageHero({
@@ -18,6 +19,7 @@ export default function PageHero({
   titleItalic,
   subtitle,
   dark = true,
+  cubaoTitle = false,
 }: PageHeroProps) {
   const bg   = dark ? 'bg-olive'     : 'bg-cream'
   const text = dark ? 'text-cream'   : 'text-brand-dark'
@@ -103,7 +105,8 @@ export default function PageHero({
 
           <h1
             data-hero-title=""
-            className={`display-heading ${text} text-[clamp(2.75rem,7vw,5.5rem)] leading-tight max-w-3xl`}
+            className={`${cubaoTitle ? '' : 'display-heading'} ${text} text-[clamp(2.75rem,7vw,5.5rem)] leading-tight max-w-3xl`}
+            style={cubaoTitle ? { fontFamily: 'var(--font-cubao-narrow), serif', fontWeight: 400, lineHeight: 1.05, letterSpacing: '-0.01em' } : undefined}
           >
             {title}
             {titleItalic && (

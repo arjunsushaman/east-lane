@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
-import { dmSerifDisplay, cormorantGaramond, jost } from '@/lib/fonts'
+import { dmSerifDisplay, cormorantGaramond, jost, cubaoNarrow } from '@/lib/fonts'
 import { defaultMetadata } from '@/lib/metadata'
 import { localBusinessSchema } from '@/lib/schema'
 import Navbar from '@/components/layout/Navbar'
@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${dmSerifDisplay.variable} ${cormorantGaramond.variable} ${jost.variable}`}
+      className={`${dmSerifDisplay.variable} ${cormorantGaramond.variable} ${jost.variable} ${cubaoNarrow.variable}`}
     >
       <head>
         <script

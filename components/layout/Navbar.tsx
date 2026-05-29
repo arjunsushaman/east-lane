@@ -5,14 +5,6 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { X, Menu } from 'lucide-react'
 
-const navLinks = [
-  { label: 'Menu',         href: '/menu'         },
-  { label: 'About',        href: '/about'        },
-  { label: 'FAQs',         href: '/faqs'         },
-  { label: 'Reservations', href: '/reservations' },
-  { label: 'Contact',      href: '/contact'      },
-]
-
 function InstagramIcon() {
   return (
     <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -30,6 +22,15 @@ function FacebookIcon() {
     </svg>
   )
 }
+
+const navLinks = [
+  { label: 'Menu',         href: '/menu'         },
+  { label: 'About',        href: '/about'        },
+  { label: 'FAQs',         href: '/faqs'         },
+  { label: 'Reservations', href: '/reservations' },
+  { label: 'Contact',      href: '/contact'      },
+]
+
 
 export default function Navbar() {
   const [scrolled,   setScrolled]   = useState(false)
@@ -66,30 +67,8 @@ export default function Navbar() {
             scrolled ? 'h-16 lg:h-[72px]' : 'h-24 lg:h-[116px]'
           }`}>
 
-            {/* ── Left: social icons + all nav links ── */}
+            {/* ── Left: nav links ── */}
             <div className="flex items-center gap-6">
-              {/* Social icons */}
-              <div className="hidden lg:flex items-center gap-4">
-                <a
-                  href="https://www.instagram.com/eastlane_bistro"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="East Lane on Instagram"
-                  className="text-cream/75 hover:text-cream transition-colors duration-200"
-                >
-                  <InstagramIcon />
-                </a>
-                <a
-                  href="https://www.facebook.com/eastlanebistro"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="East Lane on Facebook"
-                  className="text-cream/75 hover:text-cream transition-colors duration-200"
-                >
-                  <FacebookIcon />
-                </a>
-              </div>
-
               {/* All 5 nav links */}
               <div className="hidden lg:flex items-center gap-8">
                 {navLinks.map(l => (
@@ -118,12 +97,12 @@ export default function Navbar() {
               onClick={() => setMobileOpen(false)}
             >
               <Image
-                src="/images/logo-white.png"
+                src="/images/logo-icon.png"
                 alt="East Lane Asian Bistro"
-                width={300}
+                width={120}
                 height={120}
                 className={`w-auto transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
-                  scrolled ? 'h-9 lg:h-10' : 'h-16 lg:h-[76px]'
+                  scrolled ? 'h-[44px] lg:h-[52px]' : 'h-[72px] lg:h-[88px]'
                 }`}
                 priority
               />

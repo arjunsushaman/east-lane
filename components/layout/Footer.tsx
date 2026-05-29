@@ -12,6 +12,14 @@ function InstagramIcon({ size = 16 }: { size?: number }) {
   )
 }
 
+function FacebookIcon({ size = 16 }: { size?: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+    </svg>
+  )
+}
+
 const navLinks = [
   { label: 'Menu',         href: '/menu'         },
   { label: 'About',        href: '/about'        },
@@ -72,7 +80,7 @@ export default function Footer() {
             <p className="font-jost text-sm text-brand-dark/60 leading-relaxed">
               [To be confirmed before launch]
             </p>
-            <div className="mt-6">
+            <div className="mt-6 flex flex-col gap-3">
               <a
                 href="https://www.instagram.com/eastlane_bistro"
                 target="_blank" rel="noopener noreferrer"
@@ -81,6 +89,15 @@ export default function Footer() {
               >
                 <InstagramIcon size={15} />
                 <span className="font-jost text-sm">@eastlane_bistro</span>
+              </a>
+              <a
+                href="https://www.facebook.com/eastlanebistro"
+                target="_blank" rel="noopener noreferrer"
+                aria-label="Follow East Lane on Facebook"
+                className="inline-flex items-center gap-2 text-brand-dark/50 hover:text-terracotta transition-colors duration-200"
+              >
+                <FacebookIcon size={15} />
+                <span className="font-jost text-sm">eastlanebistro</span>
               </a>
             </div>
           </div>

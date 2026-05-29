@@ -133,7 +133,7 @@ export default function ChefSection() {
             <Link
               href="/reservations"
               data-cs-cta=""
-              className="pill-btn border border-brand-dark/40 text-brand-dark hover:bg-brand-dark hover:text-cream self-start"
+              className="pill-btn bg-olive border border-olive text-cream hover:bg-olive-deep hover:border-olive-deep self-center mx-auto"
             >
               · Reserve Now ·
             </Link>

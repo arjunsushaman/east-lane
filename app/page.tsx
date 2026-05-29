@@ -34,8 +34,6 @@ export default function HomePage() {
       {/* 5 — Editorial: Menu tease (large photo left + text right) */}
       <EditorialFeature
         label="The Menu"
-        heading="One Table,"
-        headingItalic="Every Craving."
         body="From the hawker lanes of Vietnam to the smoky grills of Korea and the spice markets of Thailand. Every dish is designed to share. Order a little of everything."
         linkLabel="Explore menus"
         linkHref="/menu"
