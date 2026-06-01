@@ -10,13 +10,16 @@ const EMBED_SRC =
 export default function MapSection() {
   const sectionRef = useRef<HTMLElement>(null)
   const iframeRef  = useRef<HTMLIFrameElement>(null)
+  const coverRef   = useRef<HTMLDivElement>(null)
 
   useGSAP(() => {
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
 
-    // Whole map section wipes in top-to-bottom
-    gsap.from(sectionRef.current, {
-      clipPath: 'inset(0 0 100% 0)',
+    // Cover div slides away (bottom→top origin, scaleY 1→0 = top-to-bottom reveal).
+    // Using a separate element avoids animating clip-path on the section itself,
+    // which conflicts with the iframe's GPU composite layer and causes flicker.
+    gsap.to(coverRef.current, {
+      scaleY: 0,
       duration: 1.2,
       ease: 'power3.out',
       scrollTrigger: {
@@ -38,6 +41,7 @@ export default function MapSection() {
           start: 'top bottom',
           end: 'bottom top',
           scrub: true,
+          invalidateOnRefresh: true,
         },
       }
     )
@@ -104,7 +108,7 @@ export default function MapSection() {
       style={{ height: 'clamp(420px, 55vw, 560px)' }}
       aria-label="East Lane location on map"
     >
-      {/* iframe — extended vertically for parallax headroom */}
+      {/* iframe — pointer-events none prevents Google Maps from capturing wheel events */}
       <iframe
         ref={iframeRef}
         src={EMBED_SRC}
@@ -114,6 +118,8 @@ export default function MapSection() {
           height: '130%',
           border: 0,
           filter: 'grayscale(25%) contrast(1.04) saturate(0.82)',
+          willChange: 'transform',
+          pointerEvents: 'none',
         }}
         loading="lazy"
         title="East Lane Asian Bistro on Google Maps"
@@ -177,6 +183,14 @@ export default function MapSection() {
           </a>
         </div>
       </div>
+
+      {/* Reveal cover — cream overlay that scales away on scroll-in, replacing the
+          clip-path animation that was applied to the section element itself */}
+      <div
+        ref={coverRef}
+        className="absolute inset-0 bg-cream origin-bottom z-10 pointer-events-none"
+        aria-hidden="true"
+      />
     </section>
   )
 }

@@ -561,8 +561,8 @@ export default function MenuPage() {
     <>
       <PageHero
         label="The Menu"
-        title="East Lane Menu —"
-        titleItalic="Sharing Plates in Kingston"
+        title="Sharing Plates"
+        titleItalic="in Kingston"
         subtitle="Every dish designed to share. A journey across the East — Vietnam, Korea, Thailand."
       />
 

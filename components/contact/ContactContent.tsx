@@ -1,7 +1,7 @@
 'use client'
 
 import { useRef } from 'react'
-import { MapPin, Phone, Mail, Clock } from 'lucide-react'
+import { Phone, Mail, Clock } from 'lucide-react'
 import { useGSAP } from '@gsap/react'
 import { gsap } from '@/lib/gsap'
 import ContactForm from '@/components/home/ContactForm'
@@ -28,23 +28,14 @@ function InstagramIcon() {
 
 const contactRows = [
   {
-    icon: <MapPin size={13} className="text-terracotta flex-shrink-0 mt-[3px]" />,
-    label: 'Address',
-    value: (
-      <address className="not-italic font-jost text-[0.9375rem] leading-relaxed text-brand-dark/75">
-        10 Kingston Hill<br />Kingston upon Thames, KT2 7NH
-      </address>
-    ),
-  },
-  {
     icon: <Phone size={13} className="text-terracotta flex-shrink-0 mt-[3px]" />,
     label: 'Phone',
-    value: <span className="font-jost text-[0.9375rem] text-brand-dark/50">[To be confirmed]</span>,
+    value: <a href="tel:+447533423636" className="font-jost text-[0.9375rem] text-brand-dark/75 hover:text-terracotta transition-colors duration-200">+44 7533 423636</a>,
   },
   {
     icon: <Mail size={13} className="text-terracotta flex-shrink-0 mt-[3px]" />,
     label: 'Email',
-    value: <span className="font-jost text-[0.9375rem] text-brand-dark/50">[To be confirmed]</span>,
+    value: <a href="mailto:hello@eastlane.uk" className="font-jost text-[0.9375rem] text-brand-dark/75 hover:text-terracotta transition-colors duration-200">hello@eastlane.uk</a>,
   },
   {
     icon: <Clock size={13} className="text-terracotta flex-shrink-0 mt-[3px]" />,
@@ -56,12 +47,12 @@ const contactRows = [
     label: 'Instagram',
     value: (
       <a
-        href="https://www.instagram.com/eastlane_bistro"
+        href="https://www.instagram.com/eastlanekingston"
         target="_blank"
         rel="noopener noreferrer"
         className="font-jost text-[0.9375rem] text-brand-dark/65 hover:text-terracotta transition-colors duration-200 underline underline-offset-4"
       >
-        @eastlane_bistro
+        @eastlanekingston
       </a>
     ),
   },

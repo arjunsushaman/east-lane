@@ -98,6 +98,7 @@ export default function MenuItemCard({ item }: { item: MenuItem }) {
       </div>
 
       {/* Card deck — fanned above the row on hover */}
+      {/* Temporarily commented out — ingredients & calories cards hidden
       {showDeck && (
         <div
           className="absolute pointer-events-none select-none"
@@ -134,6 +135,7 @@ export default function MenuItemCard({ item }: { item: MenuItem }) {
           </AnimatePresence>
         </div>
       )}
+      */}
     </motion.div>
   )
 }

@@ -65,11 +65,11 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-2.5">
                 <Phone size={13} className="text-terracotta flex-shrink-0" />
-                <span className="font-jost text-sm text-brand-dark/60">[TBC]</span>
+                <a href="tel:+447533423636" className="font-jost text-sm text-brand-dark/60 hover:text-terracotta transition-colors duration-200">+44 7533 423636</a>
               </li>
               <li className="flex items-center gap-2.5">
                 <Mail size={13} className="text-terracotta flex-shrink-0" />
-                <span className="font-jost text-sm text-brand-dark/60">[TBC]</span>
+                <a href="mailto:hello@eastlane.uk" className="font-jost text-sm text-brand-dark/60 hover:text-terracotta transition-colors duration-200">hello@eastlane.uk</a>
               </li>
             </ul>
           </div>
@@ -82,13 +82,13 @@ export default function Footer() {
             </p>
             <div className="mt-6 flex flex-col gap-3">
               <a
-                href="https://www.instagram.com/eastlane_bistro"
+                href="https://www.instagram.com/eastlanekingston"
                 target="_blank" rel="noopener noreferrer"
                 aria-label="Follow East Lane on Instagram"
                 className="inline-flex items-center gap-2 text-brand-dark/50 hover:text-terracotta transition-colors duration-200"
               >
                 <InstagramIcon size={15} />
-                <span className="font-jost text-sm">@eastlane_bistro</span>
+                <span className="font-jost text-sm">@eastlanekingston</span>
               </a>
               <a
                 href="https://www.facebook.com/eastlanebistro"

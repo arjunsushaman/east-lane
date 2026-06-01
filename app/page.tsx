@@ -39,25 +39,12 @@ export default function HomePage() {
         linkHref="/menu"
         imageAlt="East Lane sharing plates"
         imageSrc="/images/editorial-menu.jpg"
-        bgClass="bg-cream"
+        bgClass="bg-olive"
+        dark
       />
 
       {/* 5 — Reservation CTA block */}
       <ReservationCTA />
-
-      {/* 6 — Editorial: About / Chef story (photo right) */}
-      <EditorialFeature
-        label="About Us"
-        heading="A Slice of Every"
-        headingItalic="Country, on One Table."
-        body="East Lane is Chef Vin's answer to the food that struck a chord — the kind of cooking where everyone at the table gets a bite of everything. A menu curated so every plate tells a story of a place, a journey, a moment."
-        linkLabel="Our story"
-        linkHref="/about"
-        imageAlt="Chef Vin at East Lane"
-        imageSrc="/images/editorial-chef.jpg"
-        imageRight
-        bgClass="bg-cream"
-      />
 
       {/* 7 — Opening hours */}
       <HoursSection />

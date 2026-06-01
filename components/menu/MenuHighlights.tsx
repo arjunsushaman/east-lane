@@ -13,52 +13,52 @@ const HIGHLIGHTS = [
     desc: 'Lantern chili & fresh herbs, Vietnamese-style',
     price: '£15',
     tagline: 'The one to start with',
-    image: '/images/feast.jpg',
+    image: '/images/highlight-pork-belly.jpg',
     href: '#small-plates',
-  },
-  {
-    name: 'Lamb Racks',
-    category: 'Grills',
-    desc: 'Korean kimchi butter, charred over open flame',
-    price: '£16',
-    tagline: "Chef Vin's showstopper",
-    image: '/images/editorial-chef.jpg',
-    href: '#grills',
-  },
-  {
-    name: 'Braised Lamb Shank',
-    category: "Chef's Specials",
-    desc: 'Low & slow, served with scallion pancake',
-    price: '£24',
-    tagline: 'Low & slow, worth the wait',
-    image: '/images/editorial-menu.jpg',
-    href: '#chefs-specials',
-  },
-  {
-    name: 'Wok Tossed Aromatic Duck',
-    category: "Chef's Specials",
-    desc: 'Hoisin, cucumber, mandarin pancake',
-    price: '£15',
-    tagline: 'A crowd favourite',
-    image: '/images/reservation-interior.jpg',
-    href: '#chefs-specials',
   },
   {
     name: 'Chicken Karaage',
     category: 'Small Plates',
     desc: 'Japanese-style, soy, mirin & ginger marinade',
     price: '£10',
-    tagline: 'Straight from Japan',
-    image: '/images/chef-portrait.jpg',
+    tagline: 'Crispy, light, addictive',
+    image: '/images/highlight-chicken-karaage.jpg',
     href: '#small-plates',
+  },
+  {
+    name: 'Char Siu Pork Bao',
+    category: 'Dim Sum',
+    desc: 'Steamed BBQ pork bun, hoisin & spring onion',
+    price: '£9',
+    tagline: 'Pillowy & packed with flavour',
+    image: '/images/highlight-char-siu-bao.jpg',
+    href: '#dim-sum',
+  },
+  {
+    name: 'Lamb Racks',
+    category: 'Grills',
+    desc: 'Korean kimchi butter, charred over open flame',
+    price: '£16',
+    tagline: 'The showstopper of the grill',
+    image: '/images/highlight-lamb-racks.jpg',
+    href: '#grills',
+  },
+  {
+    name: 'Wok Tossed Aromatic Duck',
+    category: "Chef's Specials",
+    desc: 'Hoisin, cucumber, mandarin pancake',
+    price: '£15',
+    tagline: 'A crowd favourite every time',
+    image: '/images/highlight-aromatic-duck.jpg',
+    href: '#chefs-specials',
   },
   {
     name: 'Jaggery Coconut Crème Brûlée',
     category: 'Desserts',
     desc: 'Coconut cream, caramelised jaggery crust',
     price: '£8',
-    tagline: 'Sweet endings',
-    image: '/images/about-interior.jpg',
+    tagline: 'The sweet note to end on',
+    image: '/images/highlight-creme-brulee.jpg',
     href: '#desserts',
   },
 ]
@@ -134,9 +134,9 @@ export default function MenuHighlights() {
                 <Image src={card.image} alt={card.name} fill className="object-cover"
                   sizes="(max-width:640px) 100vw, (max-width:1024px) 50vw, 33vw" />
                 <div className="absolute inset-0"
-                  style={{ background: 'linear-gradient(to top, rgba(30,17,11,0.88) 0%, rgba(30,17,11,0.2) 55%, transparent 80%)' }} />
+                  style={{ background: 'linear-gradient(to top, rgba(30,17,11,0.97) 0%, rgba(30,17,11,0.82) 35%, rgba(30,17,11,0.35) 60%, transparent 85%)' }} />
                 <div className="absolute bottom-0 left-0 right-0 p-5">
-                  <p className="label-caps text-terracotta/80 mb-1.5" style={{ fontSize: '0.46rem' }}>{card.category}</p>
+                  <p className="label-caps text-cream/55 mb-1.5" style={{ fontSize: '0.46rem' }}>{card.category}</p>
                   <p className="display-heading text-cream text-xl mb-1">{card.name}</p>
                   <p className="editorial-quote text-cream/55 text-sm">{card.tagline}</p>
                 </div>
@@ -216,19 +216,19 @@ export default function MenuHighlights() {
               {/* Gradient */}
               <div
                 className="absolute inset-0 pointer-events-none"
-                style={{ background: 'linear-gradient(to top, rgba(30,17,11,0.90) 0%, rgba(30,17,11,0.30) 45%, transparent 70%)' }}
+                style={{ background: 'linear-gradient(to top, rgba(30,17,11,0.97) 0%, rgba(30,17,11,0.82) 35%, rgba(30,17,11,0.35) 60%, transparent 85%)' }}
                 aria-hidden="true"
               />
 
               {/* Content */}
               <div className="absolute bottom-0 left-0 right-0 px-5 pb-5">
-                <p className="label-caps text-terracotta/80 mb-1.5 tracking-[0.2em]" style={{ fontSize: '0.44rem' }}>
+                <p className="label-caps text-cream/55 mb-1.5 tracking-[0.2em]" style={{ fontSize: '0.44rem' }}>
                   {card.category}
                 </p>
                 <h2 className="display-heading text-cream leading-tight mb-1" style={{ fontSize: 'clamp(1rem, 2vw, 1.5rem)' }}>
                   {card.name}
                 </h2>
-                <p className="editorial-quote text-cream/55 mb-3" style={{ fontSize: 'clamp(0.72rem, 1vw, 0.9rem)' }}>
+                <p className="editorial-quote text-cream/75 mb-3" style={{ fontSize: 'clamp(0.72rem, 1vw, 0.9rem)' }}>
                   {card.tagline}
                 </p>
                 <div className="flex items-center gap-4">
@@ -236,7 +236,7 @@ export default function MenuHighlights() {
                     {card.price}
                   </span>
                   <span
-                    className="label-caps text-cream/32 group-hover:text-cream/60 transition-colors duration-300"
+                    className="label-caps text-cream/50 group-hover:text-cream/80 transition-colors duration-300"
                     style={{ fontSize: '0.4rem', letterSpacing: '0.16em' }}
                   >
                     · See in menu ·

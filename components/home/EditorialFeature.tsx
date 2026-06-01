@@ -18,6 +18,7 @@ interface EditorialFeatureProps {
   imageSrc?: string
   imageRight?: boolean
   bgClass?: string
+  dark?: boolean
 }
 
 export default function EditorialFeature({
@@ -31,6 +32,7 @@ export default function EditorialFeature({
   imageSrc,
   imageRight = false,
   bgClass = 'bg-cream',
+  dark = false,
 }: EditorialFeatureProps) {
   const sectionRef = useRef<HTMLElement>(null)
   const imageWrapRef = useRef<HTMLDivElement>(null)
@@ -124,18 +126,18 @@ export default function EditorialFeature({
       className="flex flex-col justify-center py-14 px-8 lg:py-0 lg:px-16 xl:px-20"
     >
       <div className="flex items-center gap-3 mb-6" data-anim="">
-        <span className="h-px w-6 bg-terracotta/50" />
-        <p className="label-caps text-terracotta">{label}</p>
+        <span className={`h-px w-6 ${dark ? 'bg-cream/40' : 'bg-terracotta/50'}`} />
+        <p className={`label-caps ${dark ? 'text-cream/70' : 'text-terracotta'}`}>{label}</p>
       </div>
 
       {(heading || headingItalic) && (
         <h2
           data-anim=""
-          className="display-heading text-brand-dark text-[clamp(2rem,3.8vw,3.1rem)] mb-6 leading-[1.08]"
+          className={`display-heading text-[clamp(2rem,3.8vw,3.1rem)] mb-6 leading-[1.08] ${dark ? 'text-cream' : 'text-brand-dark'}`}
         >
           {heading}
           {headingItalic && (
-            <em className="font-cormorant italic font-normal block text-[0.92em] mt-1">
+            <em className={`font-cormorant italic font-normal block text-[0.92em] mt-1 ${dark ? 'text-cream/70' : ''}`}>
               {headingItalic}
             </em>
           )}
@@ -144,7 +146,7 @@ export default function EditorialFeature({
 
       <p
         data-anim=""
-        className="font-jost text-[0.9375rem] leading-[1.8] text-brand-dark/65 mb-10 max-w-[38ch]"
+        className={`font-jost text-[0.9375rem] leading-[1.8] mb-10 max-w-[38ch] ${dark ? 'text-cream/70' : 'text-brand-dark/65'}`}
       >
         {body}
       </p>
@@ -153,7 +155,7 @@ export default function EditorialFeature({
         href={linkHref}
         data-anim=""
         data-cursor="cta"
-        className="inline-flex items-center gap-3 label-caps text-brand-dark hover:text-terracotta transition-colors duration-300 group self-start"
+        className={`inline-flex items-center gap-3 label-caps hover:text-terracotta transition-colors duration-300 group self-start ${dark ? 'text-cream/80' : 'text-brand-dark'}`}
       >
         {linkLabel}
         <span className="flex items-center gap-1.5">

@@ -173,7 +173,7 @@ export default function Navbar() {
 
           {/* Social icons */}
           <div className="flex items-center gap-5 mb-6">
-            <a href="https://www.instagram.com/eastlane_bistro" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-cream/50 hover:text-cream transition-colors duration-200">
+            <a href="https://www.instagram.com/eastlanekingston" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-cream/50 hover:text-cream transition-colors duration-200">
               <InstagramIcon />
             </a>
             <a href="https://www.facebook.com/eastlanebistro" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-cream/50 hover:text-cream transition-colors duration-200">

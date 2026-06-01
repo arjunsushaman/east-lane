@@ -103,9 +103,10 @@ export default function ReservationsContent() {
           <p data-res-note="" className="font-jost text-sm text-brand-dark/55 mb-3">
             For large groups or special occasions, please contact us directly.
           </p>
-          <address data-res-note="" className="not-italic font-jost text-sm text-brand-dark/40 mb-6">
-            10 Kingston Hill, Kingston upon Thames, KT2 7NH
-          </address>
+          <div data-res-note="" className="flex flex-col items-center gap-1.5 mb-6">
+            <a href="tel:+447533423636" className="font-jost text-sm text-brand-dark/40 hover:text-terracotta transition-colors duration-200">+44 7533 423636</a>
+            <a href="mailto:hello@eastlane.uk" className="font-jost text-sm text-brand-dark/40 hover:text-terracotta transition-colors duration-200">hello@eastlane.uk</a>
+          </div>
           <Link
             href="/contact"
             data-res-cta=""

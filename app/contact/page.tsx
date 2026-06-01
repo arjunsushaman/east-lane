@@ -16,7 +16,6 @@ export default function ContactPage() {
         label="Contact"
         title="Find"
         titleItalic="Us"
-        subtitle="10 Kingston Hill, Kingston upon Thames, KT2 7NH"
       />
       <ContactContent />
       <MapSection />

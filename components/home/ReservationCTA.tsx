@@ -69,7 +69,7 @@ export default function ReservationCTA() {
           {/* Subtle right-edge fade into olive panel */}
           <div
             className="absolute inset-y-0 right-0 w-24 hidden lg:block pointer-events-none"
-            style={{ background: 'linear-gradient(to right, transparent, rgba(92,107,58,0.6))' }}
+            style={{ background: 'linear-gradient(to right, transparent, rgba(232,222,200,0.6))' }}
             aria-hidden="true"
           />
         </div>
@@ -77,20 +77,20 @@ export default function ReservationCTA() {
         {/* Right: olive booking panel */}
         <div
           ref={panelRef}
-          className="bg-olive flex flex-col justify-center px-10 lg:px-14 xl:px-20 py-16 lg:py-20"
+          className="bg-cream flex flex-col justify-center px-10 lg:px-14 xl:px-20 py-16 lg:py-20"
         >
-          <div className="h-px w-10 bg-cream/30 mb-8" />
+          <div className="h-px w-10 bg-brand-dark/20 mb-8" />
 
-          <p className="label-caps text-cream/75 mb-5 tracking-[0.22em]">Reserve Your Table</p>
+          <p className="label-caps text-brand-dark/50 mb-5 tracking-[0.22em]">Reserve Your Table</p>
 
-          <h2 className="display-heading text-cream text-[clamp(2rem,3.2vw,2.9rem)] mb-5 leading-[1.1]">
+          <h2 className="display-heading text-brand-dark text-[clamp(2rem,3.2vw,2.9rem)] mb-5 leading-[1.1]">
             Gather Around<br />
-            <em className="font-cormorant italic font-normal text-[0.95em] text-cream/70">
+            <em className="font-cormorant italic font-normal text-[0.95em] text-brand-dark/65">
               the Table
             </em>
           </h2>
 
-          <p className="font-jost text-[0.9375rem] leading-[1.8] text-cream/70 mb-10 max-w-[34ch]">
+          <p className="font-jost text-[0.9375rem] leading-[1.8] text-brand-dark/65 mb-10 max-w-[34ch]">
             For birthday dinners, lazy Sunday lunches, date nights and big family gatherings.
             Sharing plates made for passing around.
           </p>
@@ -99,15 +99,15 @@ export default function ReservationCTA() {
             <Link
               href="/reservations"
               data-cursor="cta"
-              className="pill-btn border border-cream/55 text-cream hover:bg-cream hover:text-brand-dark justify-center py-4 transition-colors duration-300"
+              className="pill-btn border border-brand-dark/35 text-brand-dark hover:bg-brand-dark hover:text-cream justify-center py-4 transition-colors duration-300"
             >
               · Reserve Now ·
             </Link>
-            <p className="font-jost text-[0.72rem] text-cream/45 text-center">
+            <p className="font-jost text-[0.72rem] text-brand-dark/40 text-center">
               For groups &amp; special occasions,{' '}
               <Link
                 href="/contact"
-                className="underline underline-offset-4 hover:text-cream/70 transition-colors duration-200"
+                className="underline underline-offset-4 hover:text-brand-dark/70 transition-colors duration-200"
               >
                 contact us directly
               </Link>

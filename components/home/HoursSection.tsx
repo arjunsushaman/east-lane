@@ -105,7 +105,7 @@ export default function HoursSection() {
         <p className="mt-10 font-jost text-[0.72rem] text-cream/50 leading-relaxed">
           Hours confirmed before launch.{' '}
           <a
-            href="https://www.instagram.com/eastlane_bistro"
+            href="https://www.instagram.com/eastlanekingston"
             target="_blank"
             rel="noopener noreferrer"
             className="text-cream/60 hover:text-cream underline underline-offset-4 transition-colors duration-200"

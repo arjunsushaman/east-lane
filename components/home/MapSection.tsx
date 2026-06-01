@@ -60,11 +60,11 @@ export default function MapSection() {
             <div className="flex flex-col gap-3 mb-10 border-t border-cream-dark/30 pt-6">
               <div className="flex items-center justify-between">
                 <span className="label-caps text-brand-dark/30" style={{ fontSize: '0.58rem' }}>Phone</span>
-                <span className="font-jost text-sm text-brand-dark/45">[TBC]</span>
+                <a href="tel:+447533423636" className="font-jost text-sm text-brand-dark/45 hover:text-terracotta transition-colors duration-200">+44 7533 423636</a>
               </div>
               <div className="flex items-center justify-between">
                 <span className="label-caps text-brand-dark/30" style={{ fontSize: '0.58rem' }}>Email</span>
-                <span className="font-jost text-sm text-brand-dark/45">[TBC]</span>
+                <a href="mailto:hello@eastlane.uk" className="font-jost text-sm text-brand-dark/45 hover:text-terracotta transition-colors duration-200">hello@eastlane.uk</a>
               </div>
             </div>
 

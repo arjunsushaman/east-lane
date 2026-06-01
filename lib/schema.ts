@@ -21,8 +21,8 @@ export const localBusinessSchema = {
   priceRange: '££',
   currenciesAccepted: 'GBP',
   paymentAccepted: 'Cash, Credit Card',
-  telephone: '[TBC]',
-  email: '[TBC]',
+  telephone: '+44 7533 423636',
+  email: 'hello@eastlane.uk',
   openingHoursSpecification: [
     {
       '@type': 'OpeningHoursSpecification',
@@ -31,7 +31,7 @@ export const localBusinessSchema = {
       closes: 'TBC',
     },
   ],
-  sameAs: ['https://www.instagram.com/eastlane_bistro'],
+  sameAs: ['https://www.instagram.com/eastlanekingston'],
   image: 'https://eastlanekingston.co.uk/images/logo-wordmark.png',
   hasMenu: 'https://eastlanekingston.co.uk/menu',
   acceptsReservations: 'True',
