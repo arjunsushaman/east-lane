@@ -12,7 +12,7 @@ const faqData: FAQCategory[] = [
     category: 'Location & Getting Here',
     items: [
       { question: 'Where is East Lane located?', answer: 'East Lane is at 10 Kingston Hill, Kingston upon Thames, KT2 7NH.' },
-      { question: 'What are your opening hours?', answer: '[TBC — to be confirmed before launch]' },
+      { question: 'What are your opening hours?', answer: 'Tuesday to Friday: 5:00 pm – 10:30 pm. Saturday: 12:00 pm – 10:30 pm. Sunday: 12:00 pm – 9:30 pm. Closed on Mondays.' },
       { question: 'Is there parking nearby?', answer: '[TBC — to be confirmed before launch]' },
     ],
   },

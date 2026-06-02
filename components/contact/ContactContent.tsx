@@ -40,7 +40,14 @@ const contactRows = [
   {
     icon: <Clock size={13} className="text-terracotta flex-shrink-0 mt-[3px]" />,
     label: 'Opening Hours',
-    value: <span className="editorial-quote text-brand-dark/55 text-base">[To be confirmed]</span>,
+    value: (
+      <ul className="font-jost text-[0.9375rem] text-brand-dark/75 space-y-1 leading-snug">
+        <li><span className="text-brand-dark/40">Mon</span> — Closed</li>
+        <li><span className="text-brand-dark/40">Tue – Fri</span> — 5:00 pm – 10:30 pm</li>
+        <li><span className="text-brand-dark/40">Sat</span> — 12:00 pm – 10:30 pm</li>
+        <li><span className="text-brand-dark/40">Sun</span> — 12:00 pm – 9:30 pm</li>
+      </ul>
+    ),
   },
   {
     icon: <InstagramIcon />,

@@ -43,7 +43,7 @@ export default function Footer() {
               src="/images/logo-wordmark.png"
               alt="East Lane Asian Bistro"
               width={400} height={160}
-              className="h-24 lg:h-32 w-auto opacity-85 hover:opacity-100 transition-opacity duration-200"
+              className="h-32 lg:h-44 w-auto opacity-85 hover:opacity-100 transition-opacity duration-200"
             />
           </Link>
         </div>
@@ -77,9 +77,12 @@ export default function Footer() {
           {/* Col 2 — Hours */}
           <div>
             <p className="label-caps text-brand-dark/40 mb-5">Opening Hours</p>
-            <p className="font-jost text-sm text-brand-dark/60 leading-relaxed">
-              [To be confirmed before launch]
-            </p>
+            <ul className="space-y-1.5 font-jost text-sm text-brand-dark/60 leading-relaxed">
+              <li><span className="text-brand-dark/35">Mon</span> — Closed</li>
+              <li><span className="text-brand-dark/35">Tue – Fri</span> — 5:00 pm – 10:30 pm</li>
+              <li><span className="text-brand-dark/35">Sat</span> — 12:00 pm – 10:30 pm</li>
+              <li><span className="text-brand-dark/35">Sun</span> — 12:00 pm – 9:30 pm</li>
+            </ul>
             <div className="mt-6 flex flex-col gap-3">
               <a
                 href="https://www.instagram.com/eastlanekingston"

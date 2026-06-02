@@ -5,9 +5,10 @@ import { useGSAP } from '@gsap/react'
 import { gsap } from '@/lib/gsap'
 
 const days = [
-  { label: 'Monday – Thursday', time: '[TBC]' },
-  { label: 'Friday – Saturday',  time: '[TBC]' },
-  { label: 'Sunday',             time: '[TBC]' },
+  { label: 'Monday',            time: 'Closed'              },
+  { label: 'Tuesday – Friday',  time: '5:00 pm – 10:30 pm' },
+  { label: 'Saturday',          time: '12:00 pm – 10:30 pm' },
+  { label: 'Sunday',            time: '12:00 pm – 9:30 pm'  },
 ]
 
 export default function HoursSection() {
