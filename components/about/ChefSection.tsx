@@ -2,9 +2,9 @@
 
 import { useRef } from 'react'
 import Image from 'next/image'
-import Link from 'next/link'
 import { useGSAP } from '@gsap/react'
 import { gsap } from '@/lib/gsap'
+import { openBookingWidget } from '@/lib/bookingWidget'
 
 export default function ChefSection() {
   const sectionRef   = useRef<HTMLElement>(null)
@@ -130,13 +130,13 @@ export default function ChefSection() {
               corners of the East.
             </p>
 
-            <Link
-              href="/reservations"
+            <button
+              onClick={() => openBookingWidget()}
               data-cs-cta=""
               className="pill-btn bg-olive border border-olive text-cream hover:bg-olive-deep hover:border-olive-deep self-center mx-auto"
             >
               · Reserve Now ·
-            </Link>
+            </button>
           </div>
 
           {/* Chef image — right at lg, clip-path reveal + parallax */}

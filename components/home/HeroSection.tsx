@@ -145,13 +145,13 @@ export default function HeroSection() {
 
           <div className="flex flex-row items-center gap-3 sm:gap-5">
             {/* Primary — solid fill */}
-            <Link
-              href="/reservations"
+            <button
+              onClick={() => import('@/lib/bookingWidget').then(m => m.openBookingWidget())}
               data-cursor="cta"
               className="inline-flex items-center justify-center px-6 sm:px-10 py-3.5 rounded-full bg-cream text-brand-dark font-jost text-[0.72rem] font-500 tracking-[0.2em] uppercase whitespace-nowrap transition-all duration-300 hover:bg-transparent hover:text-cream border border-cream"
             >
               Book Now
-            </Link>
+            </button>
             {/* Secondary — outlined */}
             <Link
               href="/menu"

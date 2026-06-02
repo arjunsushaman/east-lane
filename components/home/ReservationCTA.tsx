@@ -5,6 +5,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { useGSAP } from '@gsap/react'
 import { gsap } from '@/lib/gsap'
+import { openBookingWidget } from '@/lib/bookingWidget'
 
 export default function ReservationCTA() {
   const sectionRef = useRef<HTMLElement>(null)
@@ -96,13 +97,13 @@ export default function ReservationCTA() {
           </p>
 
           <div className="flex flex-col gap-4">
-            <Link
-              href="/reservations"
+            <button
+              onClick={() => openBookingWidget()}
               data-cursor="cta"
               className="pill-btn border border-brand-dark/35 text-brand-dark hover:bg-brand-dark hover:text-cream justify-center py-4 transition-colors duration-300"
             >
               · Reserve Now ·
-            </Link>
+            </button>
             <p className="font-jost text-[0.72rem] text-brand-dark/40 text-center">
               For groups &amp; special occasions,{' '}
               <Link

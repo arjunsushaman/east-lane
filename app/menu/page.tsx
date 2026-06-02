@@ -6,7 +6,7 @@ import MenuHighlights from '@/components/menu/MenuHighlights'
 import MenuNav from '@/components/menu/MenuNav'
 import MenuSection from '@/components/menu/MenuSection'
 import HomepageContactSection from '@/components/home/HomepageContactSection'
-import Link from 'next/link'
+import BookingCTA from '@/components/ui/BookingCTA'
 
 export const metadata: Metadata = {
   title:       pageMetadata.menu.title,
@@ -605,13 +605,10 @@ export default function MenuPage() {
             <p className="font-jost text-sm text-brand-dark/35 mb-10">
               Menu subject to seasonal change.
             </p>
-            <Link
-              href="/reservations"
+            <BookingCTA
               data-cursor="cta"
               className="pill-btn bg-olive border border-olive text-cream hover:bg-olive-deep hover:border-olive-deep"
-            >
-              · Book a Table ·
-            </Link>
+            />
           </div>
         </div>
       </section>

@@ -7,6 +7,7 @@ import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
 import SmoothScrollProvider from '@/components/providers/SmoothScrollProvider'
 import CustomCursor from '@/components/ui/CustomCursor'
+import BookingWidgetProvider from '@/components/providers/BookingWidgetProvider'
 
 export const metadata: Metadata = defaultMetadata
 
@@ -27,6 +28,7 @@ export default function RootLayout({
         />
       </head>
       <body className="antialiased min-h-full flex flex-col">
+        <BookingWidgetProvider />
         <SmoothScrollProvider>
           <CustomCursor />
           <Navbar />

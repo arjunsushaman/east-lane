@@ -73,26 +73,35 @@ export default function ReservationsContent() {
 
   return (
     <section ref={sectionRef} className="bg-cream py-16 lg:py-24">
-      <div className="max-w-2xl mx-auto px-6 lg:px-10">
-        {/* Booking widget placeholder */}
-        <div ref={widgetRef} className="border border-cream-dark/50 bg-white p-10 lg:p-16 text-center mb-10">
-          <p className="label-caps text-brand-dark/30 mb-4" style={{ fontSize: '0.6rem' }}>
-            Booking Widget
-          </p>
-          <p className="editorial-quote text-brand-dark/50 text-xl mb-6">
-            Dojo booking widget embedded here
-          </p>
-          <p className="font-jost text-xs text-brand-dark/35 mb-8 leading-relaxed max-w-sm mx-auto">
-            Replace this placeholder with the Dojo embed code when provided by the client.
-          </p>
-          <Link
-            href="https://app.dojo.tech"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="pill-btn bg-amber border border-amber text-cream hover:bg-terracotta hover:border-terracotta px-10 py-4 justify-center"
+      <div className="max-w-3xl mx-auto px-6 lg:px-10">
+
+        {/* Iframe container */}
+        <div ref={widgetRef} className="mb-16">
+          {/* Label */}
+          <div className="flex items-center gap-4 mb-6">
+            <div className="h-px flex-1 bg-brand-dark/12" />
+            <p className="label-caps text-brand-dark/30" style={{ fontSize: '0.58rem' }}>Online Reservation</p>
+            <div className="h-px flex-1 bg-brand-dark/12" />
+          </div>
+
+          {/* Card */}
+          <div
+            className="overflow-hidden"
+            style={{
+              boxShadow: '0 8px 48px -8px rgba(30,17,11,0.13)',
+              outline: '1px solid rgba(30,17,11,0.07)',
+            }}
           >
-            · Reserve via Dojo ·
-          </Link>
+            {/* Terracotta accent bar */}
+            <div className="h-[3px]" style={{ background: 'linear-gradient(90deg, #A8481A 0%, #C8681A 55%, rgba(168,72,26,0.15) 100%)' }} />
+            <iframe
+              src="https://mylightspeed.app/reservation/e23b6d1c-d6db-4756-a3f0-268269466e8d/reservation"
+              title="Book a table at East Lane"
+              className="w-full border-0 block"
+              style={{ height: '820px' }}
+              loading="lazy"
+            />
+          </div>
         </div>
 
         {/* Divider */}

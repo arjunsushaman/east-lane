@@ -1,6 +1,8 @@
+'use client'
+
 import ContactForm from '@/components/home/ContactForm'
 import MotionSection from '@/components/ui/MotionSection'
-import Link from 'next/link'
+import { openBookingWidget } from '@/lib/bookingWidget'
 
 const reasons = [
   { label: 'Group Bookings',        desc: '8+ guests or private dining enquiries' },
@@ -42,12 +44,12 @@ export default function HomepageContactSection() {
 
               <div className="pt-7 border-t border-cream-dark/40">
                 <p className="font-jost text-sm text-brand-dark/45 mb-4">Prefer to book online?</p>
-                <Link
-                  href="/reservations"
+                <button
+                  onClick={() => openBookingWidget()}
                   className="pill-btn border border-brand-dark/30 text-brand-dark hover:bg-brand-dark hover:text-cream"
                 >
                   · Reserve a Table ·
-                </Link>
+                </button>
               </div>
             </div>
 

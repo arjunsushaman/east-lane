@@ -6,6 +6,7 @@ import FAQAccordion from '@/components/ui/FAQAccordion'
 import type { FAQCategory } from '@/components/ui/FAQAccordion'
 import { useGSAP } from '@gsap/react'
 import { gsap } from '@/lib/gsap'
+import { openBookingWidget } from '@/lib/bookingWidget'
 
 const faqData: FAQCategory[] = [
   {
@@ -125,13 +126,13 @@ export default function FaqsContentSection() {
             >
               Contact Us
             </Link>
-            <Link
+            <button
               data-faq-cta=""
-              href="/reservations"
+              onClick={() => openBookingWidget()}
               className="pill-btn bg-amber border border-amber text-cream hover:bg-terracotta hover:border-terracotta"
             >
               Book a Table
-            </Link>
+            </button>
           </div>
         </div>
       </div>

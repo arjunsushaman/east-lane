@@ -110,12 +110,14 @@ export default function Navbar() {
 
             {/* ── Right: Book Now CTA ── */}
             <div className="hidden lg:flex items-center justify-end">
-              <Link
-                href="/reservations"
+              <a
+                href="https://mylightspeed.app/reservation/e23b6d1c-d6db-4756-a3f0-268269466e8d/reservation"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="pill-btn text-[13px] tracking-[0.2em] border border-cream/70 text-cream hover:bg-cream hover:text-brand-dark"
               >
                 Book Now
-              </Link>
+              </a>
             </div>
 
             {/* Mobile right: spacer */}
@@ -144,7 +146,7 @@ export default function Navbar() {
                 src="/images/logo-white.png"
                 alt="East Lane"
                 width={200} height={80}
-                className="h-9 w-auto"
+                className="h-14 w-auto"
               />
             </Link>
             <button
@@ -182,13 +184,15 @@ export default function Navbar() {
           </div>
 
           {/* Book Now CTA */}
-          <Link
-            href="/reservations"
+          <a
+            href="https://mylightspeed.app/reservation/e23b6d1c-d6db-4756-a3f0-268269466e8d/reservation"
+            target="_blank"
+            rel="noopener noreferrer"
             onClick={() => setMobileOpen(false)}
             className="pill-btn border border-cream/50 text-cream hover:bg-cream hover:text-brand-dark justify-center py-4 text-xs"
           >
             Book Now
-          </Link>
+          </a>
         </div>
       </div>
     </>
