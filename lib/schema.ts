@@ -21,7 +21,7 @@ export const localBusinessSchema = {
   priceRange: '££',
   currenciesAccepted: 'GBP',
   paymentAccepted: 'Cash, Credit Card',
-  telephone: '+44 7533 423636',
+  telephone: '02031615960',
   email: 'hello@eastlane.uk',
   openingHoursSpecification: [
     {

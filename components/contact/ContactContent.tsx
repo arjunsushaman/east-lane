@@ -30,7 +30,7 @@ const contactRows = [
   {
     icon: <Phone size={13} className="text-terracotta flex-shrink-0 mt-[3px]" />,
     label: 'Phone',
-    value: <a href="tel:+447533423636" className="font-jost text-[0.9375rem] text-brand-dark/75 hover:text-terracotta transition-colors duration-200">+44 7533 423636</a>,
+    value: <a href="tel:02031615960" className="font-jost text-[0.9375rem] text-brand-dark/75 hover:text-terracotta transition-colors duration-200">02031615960</a>,
   },
   {
     icon: <Mail size={13} className="text-terracotta flex-shrink-0 mt-[3px]" />,
