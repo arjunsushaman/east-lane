@@ -1,4 +1,4 @@
-const siteUrl = 'https://eastlanekingston.co.uk'
+const siteUrl = 'https://eastlane.uk'
 
 export const localBusinessSchema = {
   '@context': 'https://schema.org',

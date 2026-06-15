@@ -11,8 +11,8 @@ export const metadata: Metadata = {
 }
 
 const crumbs = breadcrumbSchema([
-  { name: 'Home', url: 'https://eastlanekingston.co.uk' },
-  { name: 'Reserve a Table', url: 'https://eastlanekingston.co.uk/reservations' },
+  { name: 'Home', url: 'https://eastlane.uk' },
+  { name: 'Reserve a Table', url: 'https://eastlane.uk/reservations' },
 ])
 
 export default function ReservationsPage() {

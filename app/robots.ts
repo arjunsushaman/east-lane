@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://eastlanekingston.co.uk/sitemap.xml',
+    sitemap: 'https://eastlane.uk/sitemap.xml',
   }
 }

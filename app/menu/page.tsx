@@ -559,8 +559,8 @@ const menuSections = [
 ]
 
 const crumbs = breadcrumbSchema([
-  { name: 'Home', url: 'https://eastlanekingston.co.uk' },
-  { name: 'Menu', url: 'https://eastlanekingston.co.uk/menu' },
+  { name: 'Home', url: 'https://eastlane.uk' },
+  { name: 'Menu', url: 'https://eastlane.uk/menu' },
 ])
 
 export default function MenuPage() {

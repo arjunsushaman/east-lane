@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 
-const siteUrl = 'https://eastlanekingston.co.uk'
+const siteUrl = 'https://eastlane.uk'
 
 export const defaultMetadata: Metadata = {
   metadataBase: new URL(siteUrl),
