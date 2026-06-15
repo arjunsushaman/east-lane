@@ -18,7 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html
-      lang="en"
+      lang="en-GB"
       className={`${dmSerifDisplay.variable} ${cormorantGaramond.variable} ${jost.variable} ${cubaoNarrow.variable}`}
     >
       <head>

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { pageMetadata } from '@/lib/metadata'
+import { breadcrumbSchema } from '@/lib/schema'
 import PageHero from '@/components/shared/PageHero'
 import TextReveal from '@/components/ui/TextReveal'
 import MenuHighlights from '@/components/menu/MenuHighlights'
@@ -11,6 +12,7 @@ import BookingCTA from '@/components/ui/BookingCTA'
 export const metadata: Metadata = {
   title:       pageMetadata.menu.title,
   description: pageMetadata.menu.description,
+  alternates:  pageMetadata.menu.alternates,
 }
 
 const INTRO_TEXT =
@@ -556,9 +558,19 @@ const menuSections = [
   },
 ]
 
+const crumbs = breadcrumbSchema([
+  { name: 'Home', url: 'https://eastlanekingston.co.uk' },
+  { name: 'Menu', url: 'https://eastlanekingston.co.uk/menu' },
+])
+
 export default function MenuPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(crumbs) }}
+      />
+
       <PageHero
         label="The Menu"
         title="Sharing Plates"

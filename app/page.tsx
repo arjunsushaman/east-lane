@@ -12,8 +12,9 @@ import HomepageContactSection from '@/components/home/HomepageContactSection'
 import NewsletterSection      from '@/components/home/NewsletterSection'
 
 export const metadata: Metadata = {
-  title:       pageMetadata.home.title,
+  title:      pageMetadata.home.title,
   description: pageMetadata.home.description,
+  alternates:  pageMetadata.home.alternates,
 }
 
 export default function HomePage() {
