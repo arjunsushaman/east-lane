@@ -75,7 +75,7 @@ _Last updated: 2026-05-03_
 | Item | File / Location |
 |---|---|
 | Hero video | `public/videos/hero.mp4` |
-| Hero poster image | `public/images/hero-poster.jpg` |
+| Hero poster image | `public/images/editorial-menu.jpg` |
 | Full feast / food photography | `public/images/feast.jpg` + all section images |
 | Interior photos | EditorialFeature image props |
 | Chef Vin portrait | About page EditorialFeature |

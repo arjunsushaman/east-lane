@@ -73,7 +73,7 @@ export default function HeroSection() {
         ref={videoRef}
         className="absolute inset-0 z-0 w-full h-full object-cover"
         autoPlay muted loop playsInline preload="auto"
-        poster="/images/hero-poster.jpg"
+        poster="/images/editorial-menu.jpg"
         aria-hidden="true"
       >
         <source src="/videos/hero.mp4" type="video/mp4" />
