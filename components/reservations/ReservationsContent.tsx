@@ -95,7 +95,7 @@ export default function ReservationsContent() {
             {/* Terracotta accent bar */}
             <div className="h-[3px]" style={{ background: 'linear-gradient(90deg, #A8481A 0%, #C8681A 55%, rgba(168,72,26,0.15) 100%)' }} />
             <iframe
-              src="https://mylightspeed.app/reservation/e23b6d1c-d6db-4756-a3f0-268269466e8d/reservation"
+              src="https://www.sevenrooms.com/explore/eastlaneasianbistro/reservations/create/search/"
               title="Book a table at East Lane"
               className="w-full border-0 block"
               style={{ height: '820px' }}

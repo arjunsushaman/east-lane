@@ -111,7 +111,7 @@ export default function Navbar() {
             {/* ── Right: Book Now CTA ── */}
             <div className="hidden lg:flex items-center justify-end">
               <a
-                href="https://mylightspeed.app/reservation/e23b6d1c-d6db-4756-a3f0-268269466e8d/reservation"
+                href="https://www.sevenrooms.com/explore/eastlaneasianbistro/reservations/create/search/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="pill-btn text-[13px] tracking-[0.2em] border border-cream/70 text-cream hover:bg-cream hover:text-brand-dark"
@@ -185,7 +185,7 @@ export default function Navbar() {
 
           {/* Book Now CTA */}
           <a
-            href="https://mylightspeed.app/reservation/e23b6d1c-d6db-4756-a3f0-268269466e8d/reservation"
+            href="https://www.sevenrooms.com/explore/eastlaneasianbistro/reservations/create/search/"
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => setMobileOpen(false)}
