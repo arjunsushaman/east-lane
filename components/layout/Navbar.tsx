@@ -108,8 +108,16 @@ export default function Navbar() {
               />
             </Link>
 
-            {/* ── Right: Book Now CTA ── */}
-            <div className="hidden lg:flex items-center justify-end">
+            {/* ── Right: Order Online + Book Now CTAs ── */}
+            <div className="hidden lg:flex items-center justify-end gap-3">
+              <a
+                href="https://east-lane.slerp.com/order"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="pill-btn text-[13px] tracking-[0.2em] bg-cream border border-cream text-brand-dark hover:bg-transparent hover:text-cream"
+              >
+                Order Online
+              </a>
               <a
                 href="https://www.sevenrooms.com/explore/eastlaneasianbistro/reservations/create/search/"
                 target="_blank"
@@ -183,16 +191,27 @@ export default function Navbar() {
             </a>
           </div>
 
-          {/* Book Now CTA */}
-          <a
-            href="https://www.sevenrooms.com/explore/eastlaneasianbistro/reservations/create/search/"
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => setMobileOpen(false)}
-            className="pill-btn border border-cream/50 text-cream hover:bg-cream hover:text-brand-dark justify-center py-4 text-xs"
-          >
-            Book Now
-          </a>
+          {/* Order Online + Book Now CTAs */}
+          <div className="flex flex-col gap-3">
+            <a
+              href="https://east-lane.slerp.com/order"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setMobileOpen(false)}
+              className="pill-btn justify-center py-4 text-xs bg-cream border border-cream text-brand-dark hover:bg-transparent hover:text-cream"
+            >
+              Order Online
+            </a>
+            <a
+              href="https://www.sevenrooms.com/explore/eastlaneasianbistro/reservations/create/search/"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setMobileOpen(false)}
+              className="pill-btn border border-cream/50 text-cream hover:bg-cream hover:text-brand-dark justify-center py-4 text-xs"
+            >
+              Book Now
+            </a>
+          </div>
         </div>
       </div>
     </>
