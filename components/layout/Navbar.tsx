@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { X, Menu } from 'lucide-react'
+import { trackConversion } from '@/lib/googleAds'
 
 function InstagramIcon() {
   return (
@@ -114,6 +115,7 @@ export default function Navbar() {
                 href="https://east-lane.slerp.com/order"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackConversion()}
                 className="pill-btn text-[13px] tracking-[0.2em] bg-cream border border-cream text-brand-dark hover:bg-transparent hover:text-cream"
               >
                 Order Online
@@ -122,6 +124,7 @@ export default function Navbar() {
                 href="https://www.sevenrooms.com/explore/eastlaneasianbistro/reservations/create/search/"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackConversion()}
                 className="pill-btn text-[13px] tracking-[0.2em] border border-cream/70 text-cream hover:bg-cream hover:text-brand-dark"
               >
                 Book Now
@@ -197,7 +200,7 @@ export default function Navbar() {
               href="https://east-lane.slerp.com/order"
               target="_blank"
               rel="noopener noreferrer"
-              onClick={() => setMobileOpen(false)}
+              onClick={() => { trackConversion(); setMobileOpen(false) }}
               className="pill-btn justify-center py-4 text-xs bg-cream border border-cream text-brand-dark hover:bg-transparent hover:text-cream"
             >
               Order Online
@@ -206,7 +209,7 @@ export default function Navbar() {
               href="https://www.sevenrooms.com/explore/eastlaneasianbistro/reservations/create/search/"
               target="_blank"
               rel="noopener noreferrer"
-              onClick={() => setMobileOpen(false)}
+              onClick={() => { trackConversion(); setMobileOpen(false) }}
               className="pill-btn border border-cream/50 text-cream hover:bg-cream hover:text-brand-dark justify-center py-4 text-xs"
             >
               Book Now

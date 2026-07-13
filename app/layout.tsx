@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Script from 'next/script'
 import './globals.css'
 import { dmSerifDisplay, cormorantGaramond, jost, cubaoNarrow } from '@/lib/fonts'
 import { defaultMetadata } from '@/lib/metadata'
@@ -26,6 +27,20 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
         />
+        {/* Google Ads conversion tag */}
+        <Script
+          id="google-ads-tag"
+          src="https://www.googletagmanager.com/gtag/js?id=AW-18196726861"
+          strategy="afterInteractive"
+        />
+        <Script id="google-ads-tag-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-18196726861');
+          `}
+        </Script>
       </head>
       <body className="antialiased min-h-full flex flex-col">
         <BookingWidgetProvider />
