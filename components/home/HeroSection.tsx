@@ -1,8 +1,9 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
+import { Play } from 'lucide-react'
 import { useGSAP } from '@gsap/react'
 import { gsap, ScrollTrigger } from '@/lib/gsap'
 
@@ -12,20 +13,27 @@ export default function HeroSection() {
   const videoRef = useRef<HTMLVideoElement>(null)
   const sectionRef = useRef<HTMLElement>(null)
   const contentRef = useRef<HTMLDivElement>(null)
+  const [needsTapToPlay, setNeedsTapToPlay] = useState(false)
 
   useEffect(() => {
     const video = videoRef.current
     if (!video) return
 
-    video.play().catch(() => {})
+    video.play().then(() => setNeedsTapToPlay(false)).catch(() => setNeedsTapToPlay(true))
 
     // Resume after lock screen / tab switch
     const onVisibility = () => {
-      if (!document.hidden && video.paused) video.play().catch(() => {})
+      if (!document.hidden && video.paused) {
+        video.play().then(() => setNeedsTapToPlay(false)).catch(() => setNeedsTapToPlay(true))
+      }
     }
     document.addEventListener('visibilitychange', onVisibility)
     return () => document.removeEventListener('visibilitychange', onVisibility)
   }, [])
+
+  const handleTapToPlay = () => {
+    videoRef.current?.play().then(() => setNeedsTapToPlay(false)).catch(() => {})
+  }
 
   useGSAP(() => {
     if (!sectionRef.current || !videoRef.current || !contentRef.current) return
@@ -125,6 +133,19 @@ export default function HeroSection() {
           >
             One address, every craving.
           </motion.p>
+
+          {needsTapToPlay && (
+            <motion.button
+              onClick={handleTapToPlay}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5 }}
+              className="mt-6 inline-flex items-center gap-2 label-caps text-cream/70 hover:text-cream tracking-[0.2em] transition-colors duration-300"
+            >
+              <Play size={14} className="fill-current" aria-hidden="true" />
+              Tap to play
+            </motion.button>
+          )}
         </motion.div>
 
         {/* Bottom CTAs — pinned to lower edge of hero */}
