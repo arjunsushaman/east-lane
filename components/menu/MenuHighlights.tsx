@@ -10,7 +10,7 @@ const HIGHLIGHTS = [
   {
     name: 'Braised Pork Belly',
     category: 'Small Plates',
-    desc: 'Lantern chili & fresh herbs, Vietnamese-style',
+    desc: 'Lantern chilli & herbs',
     price: '£12',
     tagline: 'The one to start with',
     image: '/images/highlight-pork-belly.jpg',
@@ -19,7 +19,7 @@ const HIGHLIGHTS = [
   {
     name: 'Shanghai Pork Dumplings',
     category: 'Dim Sum',
-    desc: 'Shanghai-style, ginger soy',
+    desc: 'Ginger soya',
     price: '£10',
     tagline: 'Dim sum done right',
     image: '/images/highlight-pork-dumplings.jpg',
@@ -28,7 +28,7 @@ const HIGHLIGHTS = [
   {
     name: 'Chicken Satay',
     category: 'Grills',
-    desc: 'Chili peanut sauce',
+    desc: 'Chilli peanut',
     price: '£12',
     tagline: 'From the flame, straight to the table',
     image: '/images/highlight-chicken-satay.jpg',
@@ -37,7 +37,7 @@ const HIGHLIGHTS = [
   {
     name: 'Grilled Lamb Chops',
     category: 'Grills',
-    desc: 'Korean kimchi butter, charred over open flame',
+    desc: 'With Korean kimchi butter',
     price: '£15',
     tagline: 'The showstopper of the grill',
     image: '/images/highlight-lamb-racks.jpg',
@@ -46,16 +46,16 @@ const HIGHLIGHTS = [
   {
     name: 'Braised Lamb Shank',
     category: "Chef's Specials",
-    desc: 'Slow-braised, served with scallion pancake',
+    desc: 'Scallion pancake',
     price: '£18',
     tagline: 'Worth every minute of the wait',
     image: '/images/highlight-lamb-shank.jpg',
     href: '#chefs-specials',
   },
   {
-    name: 'Jaggery Coconut Crème Brûlée',
+    name: 'Jaggery Coconut Creme Bruilee',
     category: 'Desserts',
-    desc: 'Coconut cream, caramelised jaggery crust',
+    desc: '',
     price: '£8',
     tagline: 'The sweet note to end on',
     image: '/images/highlight-creme-brulee.jpg',

@@ -3,13 +3,13 @@
 import { useRef } from 'react'
 import { useGSAP } from '@gsap/react'
 import { gsap } from '@/lib/gsap'
-import MenuItemCard, { MenuItem } from './MenuItemCard'
+import MenuItemCard, { MenuEntry, isSubheading } from './MenuItemCard'
 
 interface MenuSectionProps {
   id: string
   category: string
   intro: string
-  items: MenuItem[]
+  items: MenuEntry[]
 }
 
 export default function MenuSection({ id, category, intro, items }: MenuSectionProps) {
@@ -123,8 +123,19 @@ export default function MenuSection({ id, category, intro, items }: MenuSectionP
 
       {/* Items — 2-column grid on lg+ */}
       <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-x-16 xl:gap-x-24">
-        {items.map((item) => (
-          <MenuItemCard key={item.name} item={item} />
+        {items.map((entry, i) => (
+          isSubheading(entry) ? (
+            <p
+              key={`sub-${i}`}
+              data-menu-item=""
+              className="lg:col-span-2 label-caps text-terracotta/70 pt-6 pb-1 first:pt-0"
+              style={{ fontSize: '0.6rem', letterSpacing: '0.18em' }}
+            >
+              {entry.subheading}
+            </p>
+          ) : (
+            <MenuItemCard key={entry.name} item={entry} />
+          )
         ))}
       </div>
 
