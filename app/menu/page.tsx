@@ -68,7 +68,7 @@ const menuSections = [
       { name: 'Vegetable Dumplings', desc: 'Pan seared', price: '£9' },
       { name: 'Spicy Tofu Dumplings', desc: 'House chilli sauce', price: '£9' },
       { name: 'Chicken and Spinach Dumplings', desc: 'Pan seared', price: '£9' },
-      { name: 'Prawn and Pork Wontons', desc: 'Chilli oil', price: '£10' },
+      { name: 'Prawn and Pork Dumplings', desc: 'Chilli oil', price: '£10' },
       { name: 'Hargau Prawns', desc: '', price: '£10' },
       { name: 'Shanghai Pork Dumplings', desc: 'Ginger soya', price: '£10' },
     ],
