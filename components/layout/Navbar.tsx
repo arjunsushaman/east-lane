@@ -112,7 +112,7 @@ export default function Navbar() {
             {/* ── Right: Order Online + Book Now CTAs ── */}
             <div className="hidden lg:flex items-center justify-end gap-3">
               <a
-                href="https://east-lane.slerp.com/order"
+                href="https://mylightspeed.app/FOOWIFDE/C-ordering"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => trackConversion()}
@@ -197,7 +197,7 @@ export default function Navbar() {
           {/* Order Online + Book Now CTAs */}
           <div className="flex flex-col gap-3">
             <a
-              href="https://east-lane.slerp.com/order"
+              href="https://mylightspeed.app/FOOWIFDE/C-ordering"
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => { trackConversion(); setMobileOpen(false) }}
