@@ -34,7 +34,7 @@ export const localBusinessSchema = {
   openingHoursSpecification: [
     {
       '@type': 'OpeningHoursSpecification',
-      dayOfWeek: ['Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+      dayOfWeek: ['Monday', 'Wednesday', 'Thursday', 'Friday'],
       opens: '17:00',
       closes: '22:30',
     },
@@ -76,7 +76,7 @@ export const faqPageSchema = {
       name: 'What are your opening hours?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Tuesday to Friday: 5:00 pm – 10:30 pm. Saturday: 12:00 pm – 10:30 pm. Sunday: 12:00 pm – 9:30 pm. Closed on Mondays.',
+        text: 'Monday: 5:00 pm – 10:30 pm. Closed on Tuesdays. Wednesday to Friday: 5:00 pm – 10:30 pm. Saturday: 12:00 pm – 10:30 pm. Sunday: 12:00 pm – 9:30 pm.',
       },
     },
     {

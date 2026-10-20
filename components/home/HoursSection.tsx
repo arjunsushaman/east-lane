@@ -1,13 +1,13 @@
 'use client'
 
 import { useRef } from 'react'
-import { Info } from 'lucide-react'
 import { useGSAP } from '@gsap/react'
 import { gsap } from '@/lib/gsap'
 
 const days = [
-  { label: 'Monday',            time: 'Closed'              },
-  { label: 'Tuesday – Friday',  time: '5:00 pm – 10:30 pm' },
+  { label: 'Monday',              time: '5:00 pm – 10:30 pm' },
+  { label: 'Tuesday',             time: 'Closed'              },
+  { label: 'Wednesday – Friday',  time: '5:00 pm – 10:30 pm' },
   { label: 'Saturday',          time: '12:00 pm – 10:30 pm' },
   { label: 'Sunday',            time: '12:00 pm – 9:30 pm'  },
 ]
@@ -103,23 +103,8 @@ export default function HoursSection() {
           ))}
         </div>
 
-        {/* Upcoming change notice */}
-        <div
-          role="note"
-          className="mt-10 rounded-xl border border-cream/20 bg-cream/[0.06] px-5 py-4 text-left flex gap-3.5"
-        >
-          <Info size={16} className="mt-[3px] flex-shrink-0 text-cream/70" aria-hidden="true" />
-          <p className="font-jost text-[0.85rem] text-cream/80 leading-relaxed">
-            <span className="label-caps block text-cream mb-1">From 1st November</span>
-            Starting from November 1st, the restaurant will be open on{' '}
-            <strong className="font-medium text-cream">Mondays</strong> and remain closed on{' '}
-            <strong className="font-medium text-cream">Tuesdays</strong>.
-          </p>
-        </div>
-
         {/* Footer note */}
-        <p className="mt-8 font-jost text-[0.72rem] text-cream/50 leading-relaxed">
-          Hours confirmed before launch.{' '}
+        <p className="mt-10 font-jost text-[0.72rem] text-cream/50 leading-relaxed">
           <a
             href="https://www.instagram.com/eastlanekingston"
             target="_blank"

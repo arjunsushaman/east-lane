@@ -78,8 +78,9 @@ export default function Footer() {
           <div>
             <p className="label-caps text-brand-dark/40 mb-5">Opening Hours</p>
             <ul className="space-y-1.5 font-jost text-sm text-brand-dark/60 leading-relaxed">
-              <li><span className="text-brand-dark/35">Mon</span> — Closed</li>
-              <li><span className="text-brand-dark/35">Tue – Fri</span> — 5:00 pm – 10:30 pm</li>
+              <li><span className="text-brand-dark/35">Mon</span> — 5:00 pm – 10:30 pm</li>
+              <li><span className="text-brand-dark/35">Tue</span> — Closed</li>
+              <li><span className="text-brand-dark/35">Wed – Fri</span> — 5:00 pm – 10:30 pm</li>
               <li><span className="text-brand-dark/35">Sat</span> — 12:00 pm – 10:30 pm</li>
               <li><span className="text-brand-dark/35">Sun</span> — 12:00 pm – 9:30 pm</li>
             </ul>

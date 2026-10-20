@@ -42,8 +42,9 @@ const contactRows = [
     label: 'Opening Hours',
     value: (
       <ul className="font-jost text-[0.9375rem] text-brand-dark/75 space-y-1 leading-snug">
-        <li><span className="text-brand-dark/40">Mon</span> — Closed</li>
-        <li><span className="text-brand-dark/40">Tue – Fri</span> — 5:00 pm – 10:30 pm</li>
+        <li><span className="text-brand-dark/40">Mon</span> — 5:00 pm – 10:30 pm</li>
+        <li><span className="text-brand-dark/40">Tue</span> — Closed</li>
+        <li><span className="text-brand-dark/40">Wed – Fri</span> — 5:00 pm – 10:30 pm</li>
         <li><span className="text-brand-dark/40">Sat</span> — 12:00 pm – 10:30 pm</li>
         <li><span className="text-brand-dark/40">Sun</span> — 12:00 pm – 9:30 pm</li>
       </ul>
