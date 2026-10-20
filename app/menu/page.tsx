@@ -205,7 +205,6 @@ const menuSections = [
     items: [
       { name: 'Coke Classic', desc: '', price: '£5' },
       { name: 'Coke Zero', desc: '', price: '£5' },
-      { name: 'Coke Diet', desc: '', price: '£5' },
       { name: 'Fevertree Lemonade', desc: '', price: '£4' },
       { name: 'Fevertree Gingerale', desc: '', price: '£4' },
       { name: 'Fevertree Soda', desc: '', price: '£4' },
