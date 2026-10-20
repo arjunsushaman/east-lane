@@ -10,6 +10,7 @@ import MarqueeStrip           from '@/components/home/MarqueeStrip'
 import MapSection             from '@/components/home/MapSection'
 import HomepageContactSection from '@/components/home/HomepageContactSection'
 import NewsletterSection      from '@/components/home/NewsletterSection'
+import HoursChangePopup       from '@/components/home/HoursChangePopup'
 
 export const metadata: Metadata = {
   title:      pageMetadata.home.title,
@@ -20,6 +21,9 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <>
+      {/* Hours change announcement (shows once per visitor) */}
+      <HoursChangePopup />
+
       {/* 1 — Full-screen cinematic hero */}
       <HeroSection />
 
